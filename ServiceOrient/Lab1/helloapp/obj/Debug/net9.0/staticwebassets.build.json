@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "kC/HcM81mwlY3+pYQc8V2850Git1FoRQQinLuXFmohw=",
+  "Source": "helloapp",
+  "BasePath": "_content/helloapp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

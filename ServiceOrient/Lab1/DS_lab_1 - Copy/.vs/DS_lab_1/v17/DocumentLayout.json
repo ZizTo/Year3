@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|c:\\users\\fobyt\\source\\repos\\ds_lab_1\\critterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|solutionrelative:critterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|c:\\users\\fobyt\\source\\repos\\ds_lab_1\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|solutionrelative:models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|c:\\users\\fobyt\\source\\repos\\ds_lab_1\\pages\\critters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|solutionrelative:pages\\critters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|c:\\users\\fobyt\\source\\repos\\ds_lab_1\\pages\\critters.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|solutionrelative:pages\\critters.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|c:\\users\\fobyt\\source\\repos\\ds_lab_1\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|solutionrelative:dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|c:\\users\\fobyt\\source\\repos\\ds_lab_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|c:\\users\\fobyt\\source\\repos\\ds_lab_1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{166A2AFF-720E-44C2-8F7E-AB0B118783E8}|DS_lab_1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Critters.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\Pages\\Critters.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Critters.cshtml.cs",
+              "ToolTip": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\Pages\\Critters.cshtml.cs",
+              "RelativeToolTip": "Pages\\Critters.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T12:07:44.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Critters.cshtml",
+              "DocumentMoniker": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\Pages\\Critters.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Critters.cshtml",
+              "ToolTip": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\Pages\\Critters.cshtml",
+              "RelativeToolTip": "Pages\\Critters.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAIwHgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-01T12:07:30.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrittersController.cs",
+              "DocumentMoniker": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\CrittersController.cs",
+              "RelativeDocumentMoniker": "CrittersController.cs",
+              "ToolTip": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\CrittersController.cs",
+              "RelativeToolTip": "CrittersController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAD4vx8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T09:28:21.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAD4vx4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T09:21:40.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Models.cs",
+              "DocumentMoniker": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\Models\\Models.cs",
+              "RelativeDocumentMoniker": "Models\\Models.cs",
+              "ToolTip": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\Models\\Models.cs",
+              "RelativeToolTip": "Models\\Models.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwCUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T09:17:58.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\DbContext.cs",
+              "RelativeDocumentMoniker": "DbContext.cs",
+              "ToolTip": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\DbContext.cs",
+              "RelativeToolTip": "DbContext.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T09:19:08.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\fobyt\\source\\repos\\DS_lab_1\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-01T09:24:17.647Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+﻿@page
+@model CrittersModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Critters</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        input, select, button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Player Filter</h2>
+    <label>
+        Position:
+        <select id="position">
+            <option value="">(any)</option>
+            <option value="C">C</option>
+            <option value="LW">LW</option>
+            <option value="RW">RW</option>
+            <option value="D">D</option>
+            <option value="G">G</option>
+        </select>
+    </label>
+    <label>Birth year from: <input type="number" id="yearFrom" /></label>
+    <label>to: <input type="number" id="yearTo" /></label>
+    <button onclick="loadData()">Show</button>
+
+    <h2>Players</h2>
+    <table id="playersTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Position</th>
+                <th>Birth year</th>
+                <th>Country</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="editForm" style="display:none; margin-top:20px;">
+        <h3>Edit player</h3>
+        <input type="hidden" id="editId" />
+        <label>Birth date: <input type="date" id="editBirthday" /></label>
+        <label>Country: <input type="text" id="editBirthState" /></label>
+        <button onclick="saveEdit()">Save</button>
+        <button onclick="cancelEdit()">Cancel</button>
+    </div>
+
+    <script>
+        let currentFilter = {};
+
+        async function loadData() {
+            const pos = document.getElementById("position").value;
+            const yearFrom = document.getElementById("yearFrom").value;
+            const yearTo = document.getElementById("yearTo").value;
+            let url = "/api/critters?";
+            if (pos) url += `position=${pos}&`;
+            if (yearFrom) url += `yearFrom=${yearFrom}&`;
+            if (yearTo) url += `yearTo=${yearTo}`;
+            currentFilter = { position: pos, yearFrom, yearTo };
+            const res = await fetch(url);
+            const data = await res.json();
+            renderTable(data);
+        }
+
+        function renderTable(players) {
+            const tbody = document.querySelector("#playersTable tbody");
+            tbody.innerHTML = "";
+            players.forEach(p => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${p.playerId}</td>
+                    <td>${p.fName}</td>
+                    <td>${p.sName}</td>
+                    <td>${p.position}</td>
+                    <td>${new Date(p.birthday).getFullYear()}</td>
+                    <td>${p.birthState}</td>
+                    <td><button onclick="editPlayer('${p.playerId}', '${p.birthday}', '${p.birthState}')">Edit</button></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function editPlayer(id, birthday, state) {
+            document.getElementById("editId").value = id;
+            document.getElementById("editBirthday").value = birthday.split("T")[0];
+            document.getElementById("editBirthState").value = state;
+            document.getElementById("editForm").style.display = "block";
+        }
+
+        async function saveEdit() {
+            const id = document.getElementById("editId").value;
+            const birthday = document.getElementById("editBirthday").value;
+            const state = document.getElementById("editBirthState").value;
+            let url = `/api/critters/${id}?`;
+            if (currentFilter.position) url += `position=${currentFilter.position}&`;
+            if (currentFilter.yearFrom) url += `yearFrom=${currentFilter.yearFrom}&`;
+            if (currentFilter.yearTo) url += `yearTo=${currentFilter.yearTo}`;
+            const res = await fetch(url, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ playerId: id, birthday, birthState: state })
+            });
+            if (res.ok) {
+                document.getElementById("editForm").style.display = "none";
+                loadData();
+            } else {
+                alert("Edit rejected: filter conditions were violated.");
+            }
+        }
+
+        function cancelEdit() {
+            document.getElementById("editForm").style.display = "none";
+        }
+    </script>
+</body>
+</html>

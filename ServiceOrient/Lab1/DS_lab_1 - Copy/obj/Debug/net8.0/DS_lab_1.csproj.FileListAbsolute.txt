@@ -1,0 +1,290 @@
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/appsettings.Development.json
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/appsettings.json
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/DS_lab_1.staticwebassets.endpoints.json
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/DS_lab_1.exe
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/DS_lab_1.deps.json
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/DS_lab_1.runtimeconfig.json
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/DS_lab_1.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/DS_lab_1.pdb
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.OpenApi.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.csproj.AssemblyReference.cache
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/rpswa.dswa.cache.json
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.AssemblyInfoInputs.cache
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.AssemblyInfo.cs
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.csproj.CoreCompileInputs.cache
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/rjimswa.dswa.cache.json
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/scopedcss/bundle/DS_lab_1.styles.css
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/staticwebassets.build.json
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/staticwebassets.build.json.cache
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/staticwebassets.development.json
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.csproj.Up2Date
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.dll
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/refint/DS_lab_1.dll
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.pdb
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.genruntimeconfig.cache
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/ref/DS_lab_1.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Npgsql.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Humanizer.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Build.Locator.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.CodeAnalysis.Workspaces.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Design.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Mono.TextTemplating.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/System.CodeDom.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/System.Composition.AttributedModel.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/System.Composition.Convention.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/System.Composition.Hosting.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/System.Composition.Runtime.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/System.Composition.TypedParts.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/System.IO.Pipelines.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/System.Text.Encodings.Web.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/System.Text.Json.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Json.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Physical.dll
+C:/Users/fobyt/source/repos/DS_lab_1/bin/Debug/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/staticwebassets.upToDateCheck.txt
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.RazorAssemblyInfo.cache
+C:/Users/fobyt/source/repos/DS_lab_1/obj/Debug/net8.0/DS_lab_1.RazorAssemblyInfo.cs
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/appsettings.Development.json
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/appsettings.json
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/DS_lab_1.staticwebassets.endpoints.json
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/DS_lab_1
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/DS_lab_1.deps.json
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/DS_lab_1.runtimeconfig.json
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/DS_lab_1.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/DS_lab_1.pdb
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Humanizer.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Build.Locator.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.CodeAnalysis.Workspaces.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Json.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Mono.TextTemplating.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Npgsql.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/System.CodeDom.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/System.Composition.AttributedModel.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/System.Composition.Convention.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/System.Composition.Hosting.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/System.Composition.Runtime.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/System.Composition.TypedParts.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/System.IO.Pipelines.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/System.Text.Encodings.Web.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/System.Text.Json.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.csproj.AssemblyReference.cache
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.GeneratedMSBuildEditorConfig.editorconfig
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.AssemblyInfoInputs.cache
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.AssemblyInfo.cs
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.csproj.CoreCompileInputs.cache
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.MvcApplicationPartsAssemblyInfo.cs
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.MvcApplicationPartsAssemblyInfo.cache
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.RazorAssemblyInfo.cache
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.RazorAssemblyInfo.cs
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/scopedcss/bundle/DS_lab_1.styles.css
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/staticwebassets.build.json
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/staticwebassets.development.json
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/staticwebassets/msbuild.DS_lab_1.Microsoft.AspNetCore.StaticWebAssets.props
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/staticwebassets/msbuild.DS_lab_1.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/staticwebassets/msbuild.build.DS_lab_1.props
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.DS_lab_1.props
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.DS_lab_1.props
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/staticwebassets.pack.json
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.csproj.Up2Date
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/refint/DS_lab_1.dll
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.pdb
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/DS_lab_1.genruntimeconfig.cache
+/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/Debug/net8.0/ref/DS_lab_1.dll

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Database Table Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        h2 { border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        input, select, button { padding: 8px; margin: 5px 0; width: calc(100% - 18px); }
+        button { cursor: pointer; background-color: #007bff; color: white; border: none; }
+        #columns-container .column-row { display: flex; gap: 10px; }
+        .status { margin-top: 15px; padding: 10px; border-radius: 3px; }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>1. Create a New Table</h2>
+        <div>
+            <p>Table Name: <input type="text" id="tableName" /></p>
+            <div id="columns-container">
+                <div class="column-row">
+                    <input type="text" placeholder="Column Name" class="column-name" />
+                    <select class="column-type">
+                        <option value="VARCHAR(255)">Text (VARCHAR)</option>
+                        <option value="TEXT">Long Text (TEXT)</option>
+                        <option value="INTEGER">Integer</option>
+                        <option value="BOOLEAN">Yes/No (Boolean)</option>
+                        <option value="TIMESTAMP">Date/Time (TIMESTAMP)</option>
+                    </select>
+                </div>
+            </div>
+            <button id="addColumnBtn">Add Another Column</button>
+            <button id="createTableBtn">Create Table</button>
+        </div>
+        <div id="createStatus" class="status" style="display:none;"></div>
+    </div>
+
+    <div class="container" id="data-entry-container" style="display:none;">
+        <h2>2. Add Data to '<span id="data-entry-tableName"></span>'</h2>
+        <div id="data-fields-container"></div>
+        <button id="insertDataBtn">Insert Data</button>
+        <div id="insertStatus" class="status" style="display:none;"></div>
+    </div>
+
+    <script>
+        document.getElementById('addColumnBtn').addEventListener('click', () => {
+            const container = document.getElementById('columns-container');
+            const newColumnRow = document.createElement('div');
+            newColumnRow.className = 'column-row';
+            newColumnRow.innerHTML = `
+                <input type="text" placeholder="Column Name" class="column-name" />
+                <select class="column-type">
+                    <option value="VARCHAR(255)">Text (VARCHAR)</option>
+                    <option value="TEXT">Long Text (TEXT)</option>
+                    <option value="INTEGER">Integer</option>
+                    <option value="BOOLEAN">Yes/No (Boolean)</option>
+                    <option value="TIMESTAMP">Date/Time (TIMESTAMP)</option>
+                </select>
+            `;
+            container.appendChild(newColumnRow);
+        });
+
+        document.getElementById('createTableBtn').addEventListener('click', async () => {
+            const tableName = document.getElementById('tableName').value;
+            const columns = [];
+            document.querySelectorAll('#columns-container .column-row').forEach(row => {
+                const name = row.querySelector('.column-name').value;
+                const type = row.querySelector('.column-type').value;
+                if (name) {
+                    columns.push({ name, type });
+                }
+            });
+
+            const response = await fetch('/api/create-table', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ tableName, columns })
+            });
+
+            const result = await response.json();
+            const statusDiv = document.getElementById('createStatus');
+            statusDiv.style.display = 'block';
+            statusDiv.textContent = result.message;
+
+            if (response.ok) {
+                statusDiv.className = 'status success';
+                displayDataEntryForm(tableName, columns);
+            } else {
+                statusDiv.className = 'status error';
+            }
+        });
+        
+        function displayDataEntryForm(tableName, columns) {
+            const container = document.getElementById('data-entry-container');
+            const fieldsContainer = document.getElementById('data-fields-container');
+            
+            document.getElementById('data-entry-tableName').textContent = tableName;
+            fieldsContainer.innerHTML = '';
+            
+            columns.forEach(col => {
+                const p = document.createElement('p');
+                p.textContent = `${col.name}:`;
+                const input = document.createElement('input');
+                input.type = 'text'; // Simple text input for all types for this example
+                input.id = `data-${col.name}`;
+                p.appendChild(input);
+                fieldsContainer.appendChild(p);
+            });
+            
+            container.style.display = 'block';
+        }
+
+        document.getElementById('insertDataBtn').addEventListener('click', async () => {
+    const tableName = document.getElementById('data-entry-tableName').textContent;
+    const data = {};
+    document.querySelectorAll('#data-fields-container input').forEach(input => {
+        const columnName = input.id.replace('data-', '');
+        data[columnName] = input.value;
+    });
+
+    const statusDiv = document.getElementById('insertStatus');
+    statusDiv.style.display = 'block';
+
+    try {
+        const response = await fetch('/api/insert-data', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ tableName, data })
+        });
+        
+        if (response.ok) {
+            const result = await response.json();
+            statusDiv.textContent = result.message;
+            statusDiv.className = 'status success';
+            // Очищаем поля после успешной вставки
+            document.querySelectorAll('#data-fields-container input').forEach(input => input.value = '');
+        } else {
+            const errorText = await response.text();
+            try {
+                 const errorJson = JSON.parse(errorText);
+                 statusDiv.textContent = errorJson.detail || errorJson.title || "An unknown error occurred.";
+            } catch {
+                 statusDiv.textContent = errorText || `Error: ${response.status} ${response.statusText}`;
+            }
+            statusDiv.className = 'status error';
+        }
+    } catch (error) {
+        statusDiv.textContent = `Network Error: ${error.message}`;
+        statusDiv.className = 'status error';
+    }
+});
+
+    </script>
+</body>
+</html>

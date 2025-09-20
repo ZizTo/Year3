@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DB Table Manager</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f9; color: #333; }
+        .container { max-width: 600px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2, h3 { border-bottom: 2px solid #007bff; padding-bottom: 10px; color: #007bff; }
+        input, select, button { padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 4px; width: calc(100% - 22px); }
+        button { cursor: pointer; background-color: #007bff; color: white; border: none; font-weight: bold; }
+        button:hover { background-color: #0056b3; }
+        #addColumnBtn { background-color: #28a745; } #addColumnBtn:hover { background-color: #218838; }
+        .column-row { display: flex; gap: 10px; align-items: center; }
+        .status { margin-top: 15px; padding: 10px; border-radius: 4px; display: none; }
+        .success { background-color: #d4edda; color: #155724; } .error { background-color: #f8d7da; color: #721c24; }
+        #existing-tables-list li { cursor: pointer; padding: 5px; list-style-type: none; margin-left: -20px; border-radius: 4px; }
+        #existing-tables-list li:hover { background-color: #f0f0f0; }
+        /* Стили для таблицы с данными */
+        #data-display-container table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        #data-display-container th, #data-display-container td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        #data-display-container th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container" id="existing-tables-container" style="display:none;">
+        <h2>Существующие таблицы</h2>
+        <p>Нажмите на таблицу, чтобы просмотреть и добавить в нее данные.</p>
+        <ul id="existing-tables-list"></ul>
+    </div>
+
+    <div class="container">
+        <h2>Создать новую таблицу</h2>
+        <!-- Форма создания таблицы -->
+        <div>
+            <p>Имя таблицы: <input type="text" id="tableName" /></p>
+            <div id="columns-container">
+                <div class="column-row"><input type="text" placeholder="Имя колонки" class="column-name" /><select class="column-type"><option value="VARCHAR(255)">Текст (VARCHAR)</option><option value="TEXT">Длинный текст (TEXT)</option><option value="INTEGER">Целое число (INTEGER)</option><option value="BOOLEAN">Да/Нет (BOOLEAN)</option><option value="TIMESTAMP">Дата/Время (TIMESTAMP)</option></select></div>
+            </div>
+            <button id="addColumnBtn">Добавить колонку</button>
+            <button id="createTableBtn">Создать таблицу</button>
+        </div>
+        <div id="createStatus" class="status"></div>
+    </div>
+
+    <div class="container" id="data-entry-container" style="display:none;">
+        <h2 id="current-table-title"></h2>
+        
+        <!-- НОВЫЙ БЛОК: Место для отображения данных -->
+        <div id="data-display-container"></div>
+        
+        <!-- Форма для добавления новых данных -->
+        <h3>Добавить новую запись</h3>
+        <div id="data-fields-container"></div>
+        <button id="insertDataBtn">Добавить запись</button>
+        <div id="insertStatus" class="status"></div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', loadExistingTables);
+    document.getElementById('addColumnBtn').addEventListener('click', () => {
+        const container = document.getElementById('columns-container');
+        const newRow = document.createElement('div');
+        newRow.className = 'column-row';
+        newRow.innerHTML = container.firstElementChild.innerHTML;
+        container.appendChild(newRow);
+    });
+    document.getElementById('createTableBtn').addEventListener('click', createTable);
+    document.getElementById('insertDataBtn').addEventListener('click', insertData);
+
+    async function loadExistingTables() {
+        const response = await fetch('/api/tables');
+        if (!response.ok) return;
+        const tables = await response.json();
+        const container = document.getElementById('existing-tables-container');
+        const list = document.getElementById('existing-tables-list');
+        list.innerHTML = '';
+        if (tables.length > 0) {
+            tables.forEach(tableName => {
+                const li = document.createElement('li');
+                li.textContent = tableName;
+                li.addEventListener('click', () => showDataForTable(tableName));
+                list.appendChild(li);
+            });
+            container.style.display = 'block';
+        }
+    }
+
+    async function showDataForTable(tableName) {
+        // Запрашиваем структуру и данные одновременно для скорости
+        const [schemaResponse, dataResponse] = await Promise.all([
+            fetch(`/api/tables/${tableName}`),
+            fetch(`/api/tables/${tableName}/data`)
+        ]);
+
+        if (!schemaResponse.ok || !dataResponse.ok) {
+            alert(`Не удалось загрузить данные для таблицы ${tableName}`);
+            return;
+        }
+        
+        const columns = await schemaResponse.json();
+        const dataRows = await dataResponse.json();
+        
+        displayTableData(tableName, columns, dataRows);
+        displayDataEntryForm(tableName, columns);
+    }
+    
+    function displayTableData(tableName, columns, dataRows) {
+        const container = document.getElementById('data-display-container');
+        if (dataRows.length === 0) {
+            container.innerHTML = '<p>В этой таблице пока нет данных.</p>';
+            return;
+        }
+
+        const headers = columns.map(col => `<th>${col.name}</th>`).join('');
+        const rows = dataRows.map(row => {
+            const cells = columns.map(col => {
+                const value = row[col.name] === null ? '' : row[col.name];
+                return `<td>${value}</td>`;
+            }).join('');
+            return `<tr>${cells}</tr>`;
+        }).join('');
+
+        container.innerHTML = `<h3>Существующие данные</h3><table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
+    }
+
+    function displayDataEntryForm(tableName, columns) {
+        const container = document.getElementById('data-entry-container');
+        const fieldsContainer = document.getElementById('data-fields-container');
+        document.getElementById('current-table-title').textContent = `Работа с таблицей '${tableName}'`;
+        fieldsContainer.innerHTML = '';
+        columns.forEach(col => {
+            const p = document.createElement('p');
+            const colType = (col.type || '').toUpperCase();
+            p.textContent = `${col.name}:`;
+            let inputElement;
+            switch (colType) {
+                case 'BOOLEAN':
+                    inputElement = document.createElement('select');
+                    inputElement.innerHTML = `<option value="">(Выберите)</option><option value="true">True</option><option value="false">False</option>`;
+                    break;
+                case 'INTEGER':
+                    inputElement = document.createElement('input');
+                    inputElement.type = 'number';
+                    break;
+                case 'TIMESTAMP WITHOUT TIME ZONE': case 'TIMESTAMP':
+                     inputElement = document.createElement('input');
+                     inputElement.type = 'datetime-local';
+                     break;
+                default:
+                    inputElement = document.createElement('input');
+                    inputElement.type = 'text';
+                    break;
+            }
+            inputElement.dataset.columnName = col.name;
+            p.appendChild(inputElement);
+            fieldsContainer.appendChild(p);
+        });
+        container.style.display = 'block';
+        window.scrollTo(0, container.offsetTop);
+    }
+
+    async function createTable() {
+        const tableName = document.getElementById('tableName').value;
+        const columns = [];
+        document.querySelectorAll('#columns-container .column-row').forEach(row => {
+            const name = row.querySelector('.column-name').value;
+            const type = row.querySelector('.column-type').value;
+            if (name) columns.push({ name, type });
+        });
+        await handleRequest('/api/create-table', { tableName, columns }, 'createStatus', () => {
+            showDataForTable(tableName);
+            loadExistingTables();
+        });
+    }
+
+    async function insertData() {
+        const tableName = document.getElementById('current-table-title').textContent.match(/'(.*?)'/)[1];
+        const data = {};
+        document.querySelectorAll('#data-fields-container [data-column-name]').forEach(input => {
+            data[input.dataset.columnName] = input.value;
+        });
+        await handleRequest('/api/insert-data', { tableName, data }, 'insertStatus', () => {
+            // После успешной вставки, обновляем данные в таблице
+            showDataForTable(tableName); 
+        });
+    }
+
+    async function handleRequest(url, body, statusId, onSuccess) {
+        const statusDiv = document.getElementById(statusId);
+        statusDiv.style.display = 'block';
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            });
+            const result = await response.json();
+            statusDiv.textContent = result.message || (result.errors ? JSON.stringify(result.errors) : (result.title || 'Unknown error'));
+            if (response.ok) {
+                statusDiv.className = 'status success';
+                if (onSuccess) onSuccess(result);
+            } else {
+                statusDiv.className = 'status error';
+            }
+        } catch (error) {
+            statusDiv.textContent = `Network Error: ${error.message}`;
+            statusDiv.className = 'status error';
+        }
+    }
+</script>
+</body>
+</html>

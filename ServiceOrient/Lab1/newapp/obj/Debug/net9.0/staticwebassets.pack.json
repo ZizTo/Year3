@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "/home/zizto/Documents/GitHub/Year3/ServiceOrient/Lab1/newapp/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.newapp.props",
+      "PackagePath": "build\\newapp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.newapp.props",
+      "PackagePath": "buildMultiTargeting\\newapp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.newapp.props",
+      "PackagePath": "buildTransitive\\newapp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.newapp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.newapp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

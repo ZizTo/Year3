@@ -3624,11 +3624,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/DS_lab_1.csproj",
+      "projectUniqueName": "/home/zizto/Documents/GitHub/Year3/ServiceOrient/Lab1/DS_lab_1 - Copy/DS_lab_1.csproj",
       "projectName": "DS_lab_1",
-      "projectPath": "/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/DS_lab_1.csproj",
+      "projectPath": "/home/zizto/Documents/GitHub/Year3/ServiceOrient/Lab1/DS_lab_1 - Copy/DS_lab_1.csproj",
       "packagesPath": "/home/zizto/.nuget/packages/",
-      "outputPath": "/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/",
+      "outputPath": "/home/zizto/Documents/GitHub/Year3/ServiceOrient/Lab1/DS_lab_1 - Copy/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/zizto/.nuget/NuGet/NuGet.Config"

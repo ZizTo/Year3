@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J+t87ICSbxQ=",
+  "dgSpecHash": "R6Yt0YTJ6As=",
   "success": true,
-  "projectFilePath": "/home/zizto/Documents/Yaer3/ServiceOrient/Lab1/DS_lab_1 - Copy/DS_lab_1.csproj",
+  "projectFilePath": "/home/zizto/Documents/GitHub/Year3/ServiceOrient/Lab1/DS_lab_1 - Copy/DS_lab_1.csproj",
   "expectedPackageFiles": [
     "/home/zizto/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/zizto/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

@@ -10,186 +10,122 @@ var app = builder.Build();
 // Убедитесь, что имена пользователя, пароль и база данных соответствуют тем, что вы создали ранее.
 string connectionString = "Host=localhost;Username=lab1user;Password=lab1userPassword;Database=crittersdb;";
 
-// --- API Endpoint to Create a Table ---
-app.MapPost("/api/create-table", async (HttpContext context) =>
+app.MapPost("/api/create-table", async (TableDefinition tableDef) =>
 {
+    // Проверяем, что данные от клиента корректны
+    if (string.IsNullOrWhiteSpace(tableDef.TableName) || tableDef.Columns.Count == 0)
+    {
+        return Results.BadRequest(new { message = "Table name and at least one column are required." });
+    }
+
+    // Безопасная валидация типов данных
+    var allowedTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+    {
+        "VARCHAR(255)", "TEXT", "INTEGER", "BOOLEAN", "TIMESTAMP"
+    };
+
+    var columnsSql = new List<string>();
+    foreach (var col in tableDef.Columns)
+    {
+        if (string.IsNullOrWhiteSpace(col.Name) || !allowedTypes.Contains(col.Type))
+        {
+            return Results.BadRequest(new { message = $"Invalid column name or type '{col.Type}'." });
+        }
+        // Формируем часть SQL-запроса, оборачивая имена в кавычки для безопасности
+        columnsSql.Add($"\"{col.Name}\" {col.Type}");
+    }
+
+    var tableName = tableDef.TableName;
+    var createTableSql = $"CREATE TABLE IF NOT EXISTS \"{tableName}\" ({string.Join(", ", columnsSql)})";
+
     try
     {
-        using var reader = new StreamReader(context.Request.Body);
-        var requestBody = await reader.ReadToEndAsync();
-        var tableDefinition = JsonSerializer.Deserialize<TableDefinition>(requestBody);
-
-        if (tableDefinition == null || string.IsNullOrWhiteSpace(tableDefinition.TableName) || tableDefinition.Columns.Count == 0)
-        {
-            return Results.BadRequest(new { message = "Invalid table definition." });
-        }
-
-        var tableName = Sanitize(tableDefinition.TableName);
-        var columnsSql = new List<string>();
-        
-        // --- НАЧАЛО ИЗМЕНЕНИЙ ---
-
-        // Создаем список разрешенных типов данных на сервере.
-        // Это гарантирует, что в SQL-запрос не попадет ничего лишнего.
-        var allowedTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-        {
-            "VARCHAR(255)", "TEXT", "INTEGER", "BOOLEAN", "TIMESTAMP"
-        };
-
-        foreach (var col in tableDefinition.Columns)
-        {
-            if (string.IsNullOrWhiteSpace(col.Name) || string.IsNullOrWhiteSpace(col.Type)) continue;
-
-            // Проверяем, есть ли тип, присланный клиентом, в нашем списке разрешенных.
-            if (!allowedTypes.Contains(col.Type))
-            {
-                // Если типа нет в списке, возвращаем ошибку.
-                return Results.BadRequest(new { message = $"Data type '{col.Type}' is not allowed." });
-            }
-
-            // Теперь мы уверены, что тип безопасен.
-            // Применяем Sanitize ТОЛЬКО к имени колонки, а тип используем как есть.
-            // Имя колонки оборачиваем в двойные кавычки - это хорошая практика для PostgreSQL.
-            columnsSql.Add($"\"{Sanitize(col.Name)}\" {col.Type}");
-        }
-        
-        // --- КОНЕЦ ИЗМЕНЕНИЙ ---
-
-        if (columnsSql.Count == 0)
-        {
-             return Results.BadRequest(new { message = "No valid columns provided." });
-        }
-
-        // Имя таблицы тоже оборачиваем в двойные кавычки.
-        var createTableSql = $"CREATE TABLE \"{tableName}\" ({string.Join(", ", columnsSql)})";
-        
-        // Выводим финальный SQL-запрос в консоль для отладки
-        Console.WriteLine($"Executing SQL: {createTableSql}");
-
-        await using (var connection = new NpgsqlConnection(connectionString))
-        {
-            await connection.OpenAsync();
-            await using (var command = new NpgsqlCommand(createTableSql, connection))
-            {
-                await command.ExecuteNonQueryAsync();
-            }
-        }
-
+        await using var connection = new NpgsqlConnection(connectionString);
+        await connection.OpenAsync();
+        await using var command = new NpgsqlCommand(createTableSql, connection);
+        await command.ExecuteNonQueryAsync();
         return Results.Ok(new { message = $"Table '{tableName}' created successfully." });
     }
     catch (Exception ex)
     {
-        Console.WriteLine("--- AN ERROR OCCURRED ---");
-        Console.WriteLine($"Error Message: {ex.Message}");
-        Console.WriteLine($"Stack Trace: {ex.StackTrace}");
-        
-        return Results.Problem($"An error occurred on the server: {ex.Message}");
+        return Results.Problem($"Server error: {ex.Message}");
     }
 });
 
-// --- API Endpoint to Insert Data ---
-// --- API Endpoint to Insert Data ---
-app.MapPost("/api/insert-data", async (HttpContext context) =>
+// --- API ЭНДПОИНТ ДЛЯ ВСТАВКИ ДАННЫХ ---
+app.MapPost("/api/insert-data", async (DataInsertionRequest request) =>
 {
+    if (string.IsNullOrWhiteSpace(request.TableName) || request.Data.Count == 0)
+    {
+        return Results.BadRequest(new { message = "Invalid data for insertion." });
+    }
+
+    var tableName = Sanitize(request.TableName);
+    var columnNames = request.Data.Keys.Select(Sanitize).ToList();
+    
+    var columnList = string.Join(", ", columnNames.Select(c => $"\"{c}\""));
+    var parameterList = string.Join(", ", columnNames.Select(c => $"@{c}"));
+    
+    var insertSql = $"INSERT INTO \"{tableName}\" ({columnList}) VALUES ({parameterList})";
+
     try
     {
-        using var reader = new StreamReader(context.Request.Body);
-        var requestBody = await reader.ReadToEndAsync();
-        var dataInsertion = JsonSerializer.Deserialize<DataInsertionRequest>(requestBody);
+        await using var connection = new NpgsqlConnection(connectionString);
+        await connection.OpenAsync();
+        await using var command = new NpgsqlCommand(insertSql, connection);
 
-        if (dataInsertion == null || string.IsNullOrWhiteSpace(dataInsertion.TableName) || dataInsertion.Data.Count == 0)
+        foreach (var colName in columnNames)
         {
-            return Results.BadRequest(new { message = "Invalid data for insertion." });
+            var value = request.Data[colName];
+            // Пустые строки заменяем на NULL для совместимости с не-текстовыми типами
+            command.Parameters.AddWithValue($"@{colName}", string.IsNullOrEmpty(value?.ToString()) ? DBNull.Value : value);
         }
-        
-        var tableName = Sanitize(dataInsertion.TableName);
-        var columnNames = dataInsertion.Data.Keys.Select(c => Sanitize(c)).ToList();
-        var parameterNames = string.Join(", ", columnNames.Select(c => $"@{c}"));
-        var columnList = string.Join(", ", columnNames.Select(c => $"\"{c}\""));
-        
-        var insertSql = $"INSERT INTO \"{tableName}\" ({columnList}) VALUES ({parameterNames})";
 
-        // --- ДОБАВЛЕНО ЛОГИРОВАНИЕ ---
-        Console.WriteLine($"Executing SQL: {insertSql}");
-
-        await using (var connection = new NpgsqlConnection(connectionString))
-        {
-            await connection.OpenAsync();
-            await using (var command = new NpgsqlCommand(insertSql, connection))
-            {
-                foreach (var colName in columnNames)
-                {
-                    // Получаем значение. Если это пустая строка, заменим на DBNull.Value
-                    // Это важно для числовых и других нетекстовых полей.
-                    var valueObject = dataInsertion.Data[colName];
-                    var value = (valueObject is string s && string.IsNullOrEmpty(s)) ? DBNull.Value : valueObject;
-
-                    Console.WriteLine($"  - Parameter: @{colName} = '{value}'");
-                    command.Parameters.AddWithValue($"@{colName}", value);
-                }
-                await command.ExecuteNonQueryAsync();
-            }
-        }
+        await command.ExecuteNonQueryAsync();
         return Results.Ok(new { message = "Data inserted successfully." });
     }
     catch (Exception ex)
     {
-        // --- УЛУЧШЕННЫЙ БЛОК CATCH ---
-        Console.WriteLine("--- AN ERROR OCCURRED (INSERT-DATA) ---");
-        Console.WriteLine($"Error Message: {ex.Message}");
-        Console.WriteLine($"Stack Trace: {ex.StackTrace}");
-        
-        return Results.Problem($"An error occurred on the server: {ex.Message}");
+        return Results.Problem($"Server error: {ex.Message}");
     }
 });
 
-
-
-// Serve the HTML file as the default page
-app.MapGet("/", (HttpContext context) => {
-    context.Response.ContentType = "text/html; charset=utf-8";
-    return context.Response.SendFileAsync("html/index.html");
-});
-
+// Настройка для раздачи статических файлов (нашего index.html)
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.Run();
 
+// --- ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ И ФУНКЦИИ ---
 
-// --- Helper Classes and Functions ---
-// PostgreSQL может использовать кавычки для имен, но для простоты оставим эту функцию
-// --- Helper Classes and Functions ---
-
-// Просто хорошая практика для предотвращения SQL-инъекций
-string Sanitize(string input)
-{
-    return new string(input.Where(c => char.IsLetterOrDigit(c) || c == '_').ToArray());
-}
-
+// Классы для автоматического преобразования JSON в C# объекты
 public class TableDefinition
 {
-    // Атрибут явно указывает, что свойство C# "TableName" соответствует свойству "tableName" в JSON.
     [JsonPropertyName("tableName")]
-    public string TableName { get; set; }
-
+    public string TableName { get; set; } = "";
     [JsonPropertyName("columns")]
-    public List<ColumnDefinition> Columns { get; set; } = new(); // Добавил = new() - это хорошая практика
+    public List<ColumnDefinition> Columns { get;  set; } = new();
 }
 
 public class ColumnDefinition
 {
     [JsonPropertyName("name")]
-    public string Name { get; set; }
-
+    public string Name { get; set; } = "";
     [JsonPropertyName("type")]
-    public string Type { get; set; }
+    public string Type { get; set; } = "";
 }
 
 public class DataInsertionRequest
 {
-    // Также добавим атрибуты и сюда для единообразия
     [JsonPropertyName("tableName")]
-    public string TableName { get; set; }
-
+    public string TableName { get; set; } = "";
     [JsonPropertyName("data")]
-    public Dictionary<string, object> Data { get; set; }
+    public Dictionary<string, object> Data { get; set; } = new();
 }
+
+// Функция для "очистки" имен таблиц и колонок от опасных символов
+/*
+string Sanitize(string input)
+{
+    return new string(input.Where(c => char.IsLetterOrDigit(c) || c == '_').ToArray());
+}*/

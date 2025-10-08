@@ -1,0 +1,13 @@
+<p>service-details works!</p>
+<div *ngIf="service$ | async as service" class="card mt-4">
+  <div class="card-header">
+    Детали услуги #{{ service.id }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ service.description }}</h5>
+    <p class="card-text">
+      Стоимость: {{ service.price }} руб/мес
+    </p>
+    <button class="btn" (click)="gotoServices()">Назад к списку</button>
+  </div>
+</div>

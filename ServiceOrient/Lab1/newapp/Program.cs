@@ -12,12 +12,13 @@ string Sanitize(string input) => new string(input.Where(c => char.IsLetterOrDigi
 app.MapGet("/api/tables", async () =>
 {
     var tables = new List<string>();
-    var sql = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_type = 'BASE TABLE'";
+    // ИЗМЕНЕНО: SQL-запрос для SQL Server
+    var sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'";
     try
     {
-        await using var connection = new NpgsqlConnection(connectionString);
+        await using var connection = new SqlConnection(connectionString); // ИЗМЕНЕНО: SqlConnection
         await connection.OpenAsync();
-        await using var command = new NpgsqlCommand(sql, connection);
+        await using var command = new SqlCommand(sql, connection); // ИЗМЕНЕНО: SqlCommand
         await using var reader = await command.ExecuteReaderAsync();
         while (await reader.ReadAsync())
         {
@@ -32,12 +33,13 @@ app.MapGet("/api/tables", async () =>
 app.MapGet("/api/tables/{tableName}", async (string tableName) =>
 {
     var columns = new List<ColumnDefinition>();
-    var sql = "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = @tableName";
+    // ИЗМЕНЕНО: SQL-запрос для SQL Server
+    var sql = "SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = @tableName";
     try
     {
-        await using var connection = new NpgsqlConnection(connectionString);
+        await using var connection = new SqlConnection(connectionString);
         await connection.OpenAsync();
-        await using var command = new NpgsqlCommand(sql, connection);
+        await using var command = new SqlCommand(sql, connection);
         command.Parameters.AddWithValue("@tableName", Sanitize(tableName));
         await using var reader = await command.ExecuteReaderAsync();
         while (await reader.ReadAsync())
@@ -53,13 +55,13 @@ app.MapGet("/api/tables/{tableName}", async (string tableName) =>
 app.MapGet("/api/tables/{tableName}/data", async (string tableName) =>
 {
     var rows = new List<Dictionary<string, object>>();
-    var sanitizedTableName = Sanitize(tableName);
-    var sql = $"SELECT * FROM \"{sanitizedTableName}\""; 
+    // ИЗМЕНЕНО: SQL Server использует квадратные скобки [] для экранирования имен
+    var sql = $"SELECT * FROM [{Sanitize(tableName)}]";
     try
     {
-        await using var connection = new NpgsqlConnection(connectionString);
+        await using var connection = new SqlConnection(connectionString);
         await connection.OpenAsync();
-        await using var command = new NpgsqlCommand(sql, connection);
+        await using var command = new SqlCommand(sql, connection);
         await using var reader = await command.ExecuteReaderAsync();
 
         while (await reader.ReadAsync())
@@ -67,8 +69,7 @@ app.MapGet("/api/tables/{tableName}/data", async (string tableName) =>
             var row = new Dictionary<string, object>();
             for (int i = 0; i < reader.FieldCount; i++)
             {
-                var value = reader.GetValue(i);
-                row[reader.GetName(i)] = value is DBNull ? null : value;
+                row[reader.GetName(i)] = reader.GetValue(i) is DBNull ? null : reader.GetValue(i);
             }
             rows.Add(row);
         }
@@ -82,27 +83,31 @@ app.MapPost("/api/create-table", async (TableDefinition tableDef) =>
 {
     if (string.IsNullOrWhiteSpace(tableDef.TableName) || tableDef.Columns.Count == 0)
         return Results.BadRequest(new { message = "Table name and at least one column are required." });
-    var allowedTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "VARCHAR(255)", "TEXT", "INTEGER", "BOOLEAN", "TIMESTAMP" };
+    
+    // ИЗМЕНЕНО: Типы данных для SQL Server
+    var allowedTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "NVARCHAR(255)", "NVARCHAR(MAX)", "INT", "BIT", "DATETIME2" };
     var columnsSql = new List<string>();
     foreach (var col in tableDef.Columns)
     {
         if (string.IsNullOrWhiteSpace(col.Name) || !allowedTypes.Contains(col.Type))
             return Results.BadRequest(new { message = $"Invalid column name or type '{col.Type}'." });
-        columnsSql.Add($"\"{Sanitize(col.Name)}\" {col.Type}");
+        columnsSql.Add($"[{Sanitize(col.Name)}] {col.Type}");
     }
-    var createTableSql = $"CREATE TABLE IF NOT EXISTS \"{Sanitize(tableDef.TableName)}\" ({string.Join(", ", columnsSql)})";
+    
+    // ИЗМЕНЕНО: Убрано IF NOT EXISTS (в SQL Server другой синтаксис, проще обработать ошибку)
+    var createTableSql = $"CREATE TABLE [{Sanitize(tableDef.TableName)}] ({string.Join(", ", columnsSql)})";
     try
     {
-        await using var connection = new NpgsqlConnection(connectionString);
+        await using var connection = new SqlConnection(connectionString);
         await connection.OpenAsync();
-        await using var command = new NpgsqlCommand(createTableSql, connection);
+        await using var command = new SqlCommand(createTableSql, connection);
         await command.ExecuteNonQueryAsync();
         return Results.Ok(new { message = $"Table '{Sanitize(tableDef.TableName)}' created successfully." });
     }
     catch (Exception ex) { return Results.Problem($"Server error: {ex.Message}"); }
 });
 
-// --- ЭНДПОИНТ: Вставить данные (С ИСПРАВЛЕНИЯМИ) ---
+// --- ЭНДПОИНТ: Вставить данные ---
 app.MapPost("/api/insert-data", async (DataInsertionRequest request) =>
 {
     if (string.IsNullOrWhiteSpace(request.TableName) || request.Data.Count == 0)
@@ -112,13 +117,11 @@ app.MapPost("/api/insert-data", async (DataInsertionRequest request) =>
     
     try
     {
-        await using var connection = new NpgsqlConnection(connectionString);
+        await using var connection = new SqlConnection(connectionString);
         await connection.OpenAsync();
-
-        // 1. СНАЧАЛА ПОЛУЧАЕМ СХЕМУ (типы колонок) ТАБЛИЦЫ
         var columnTypes = new Dictionary<string, string>();
-        var schemaSql = "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = @tableName";
-        await using (var schemaCmd = new NpgsqlCommand(schemaSql, connection))
+        var schemaSql = "SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = @tableName";
+        await using (var schemaCmd = new SqlCommand(schemaSql, connection))
         {
             schemaCmd.Parameters.AddWithValue("@tableName", tableName);
             await using (var reader = await schemaCmd.ExecuteReaderAsync())
@@ -130,13 +133,12 @@ app.MapPost("/api/insert-data", async (DataInsertionRequest request) =>
             }
         }
 
-        // 2. ТЕПЕРЬ СОБИРАЕМ ЗАПРОС И ПРАВИЛЬНО ПРЕОБРАЗУЕМ ДАННЫЕ
         var columnNames = request.Data.Keys.Select(Sanitize).ToList();
-        var columnList = string.Join(", ", columnNames.Select(c => $"\"{c}\""));
+        var columnList = string.Join(", ", columnNames.Select(c => $"[{c}]"));
         var parameterList = string.Join(", ", columnNames.Select(c => $"@{c}"));
-        var insertSql = $"INSERT INTO \"{tableName}\" ({columnList}) VALUES ({parameterList})";
+        var insertSql = $"INSERT INTO [{tableName}] ({columnList}) VALUES ({parameterList})";
 
-        await using var command = new NpgsqlCommand(insertSql, connection);
+        await using var command = new SqlCommand(insertSql, connection);
         foreach (var colName in columnNames)
         {
             var rawValue = request.Data[colName];
@@ -145,22 +147,20 @@ app.MapPost("/api/insert-data", async (DataInsertionRequest request) =>
             if (rawValue is null || (rawValue is string s && string.IsNullOrWhiteSpace(s))) {
                 parameterValue = DBNull.Value;
             } else {
-                var columnType = columnTypes.GetValueOrDefault(colName, "TEXT"); // Узнаем тип колонки
+                var columnType = columnTypes.GetValueOrDefault(colName, "NVARCHAR");
                 var valueString = rawValue.ToString();
-
                 switch (columnType) {
-                    case "INTEGER":
+                    case "INT":
                         parameterValue = int.Parse(valueString);
                         break;
-                    case "TIMESTAMP WITHOUT TIME ZONE":
-                    case "TIMESTAMP":
+                    case "DATETIME2":
                         parameterValue = DateTime.Parse(valueString);
                         break;
-                    case "BOOLEAN":
+                    case "BIT":
                         var lowerValue = valueString.ToLowerInvariant();
                         parameterValue = (lowerValue == "true" || lowerValue == "t" || lowerValue == "yes" || lowerValue == "1");
                         break;
-                    default: // Для VARCHAR, TEXT и других
+                    default:
                         parameterValue = valueString;
                         break;
                 }
@@ -177,7 +177,7 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 app.Run();
 
-// --- Вспомогательные классы ---
+// --- Вспомогательные классы (без изменений) ---
 public class TableDefinition { [JsonPropertyName("tableName")] public string TableName { get; set; } = ""; [JsonPropertyName("columns")] public List<ColumnDefinition> Columns { get; set; } = new(); }
 public class ColumnDefinition { [JsonPropertyName("name")] public string Name { get; set; } = ""; [JsonPropertyName("type")] public string Type { get; set; } = ""; }
 public class DataInsertionRequest { [JsonPropertyName("tableName")] public string TableName { get; set; } = ""; [JsonPropertyName("data")] public Dictionary<string, object> Data { get; set; } = new(); }

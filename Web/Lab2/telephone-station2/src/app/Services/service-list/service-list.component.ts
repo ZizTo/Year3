@@ -1,6 +1,4 @@
-// src/app/Services/service-list/service-list.component.ts
-
-import { Component, OnInit } from '@angular/core'; // 1. Возвращаем OnInit
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -12,18 +10,14 @@ import { StationService } from '../services/station.service';
   selector: 'app-service-list',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './service-list.html', // Убедитесь, что расширение правильное
-  styleUrl: './service-list.css'   // Убедитесь, что расширение правильное
+  templateUrl: './service-list.html',
+  styleUrl: './service-list.css'
 })
-export class ServiceListComponent implements OnInit { // 2. Реализуем OnInit
-  
-  // 3. Объявляем свойство, но не инициализируем
+export class ServiceListComponent implements OnInit {
   public services$!: Observable<Service[]>;
 
-  // 4. Конструктор ТОЛЬКО для инъекций. Тело пустое.
   constructor(private stationService: StationService) { }
 
-  // 5. ВСЯ логика переезжает в ngOnInit
   ngOnInit(): void {
     this.services$ = this.stationService.services$;
   }

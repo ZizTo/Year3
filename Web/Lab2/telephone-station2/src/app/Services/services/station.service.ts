@@ -11,15 +11,12 @@ import { Service } from '../service.model';
 export class StationService {
   private firestoreService = inject(FirestoreService);
 
-  // Просто передаем "живой" поток данных из Firestore
   public services$ = this.firestoreService.getServices();
 
   getService(id: string): Observable<Service> {
     return this.firestoreService.getService(id);
   }
-
-  // В Firestore ID - это строка, а наша модель Service ожидает number.
-  // И Firestore сам генерирует ID. Поэтому мы убираем его перед отправкой.
+  
   addService(service: Service): Promise<any> {
     const { id, ...data } = service;
     return this.firestoreService.addService(data);

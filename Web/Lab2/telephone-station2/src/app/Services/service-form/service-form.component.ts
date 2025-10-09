@@ -1,5 +1,3 @@
-// src/app/Services/service-form/service-form.component.ts
-
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -13,8 +11,8 @@ import { StationService } from '../services/station.service';
   selector: 'app-service-form',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './service-form.html', // Убедитесь, что расширение правильное
-  styleUrl: './service-form.css'   // Убедитесь, что расширение правильное
+  templateUrl: './service-form.html',
+  styleUrl: './service-form.css'
 })
 export class ServiceFormComponent implements OnInit, OnDestroy {
   service: Service | undefined;

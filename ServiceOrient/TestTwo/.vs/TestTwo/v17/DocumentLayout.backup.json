@@ -3,12 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2D23D3A0-42CF-478B-A802-60CB3659D26D}|TestTwo\\TestTwo.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\testtwo\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{2D23D3A0-42CF-478B-A802-60CB3659D26D}|TestTwo\\TestTwo.csproj|solutionrelative:testtwo\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}|DatabaseWcfService\\DatabaseWcfService.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasewcfservice\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}|DatabaseWcfService\\DatabaseWcfService.csproj|solutionrelative:databasewcfservice\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}|DatabaseWcfService\\DatabaseWcfService.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasewcfservice\\idatabaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}|DatabaseWcfService\\DatabaseWcfService.csproj|solutionrelative:databasewcfservice\\idatabaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}|DatabaseWcfService\\DatabaseWcfService.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasewcfservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}|DatabaseWcfService\\DatabaseWcfService.csproj|solutionrelative:databasewcfservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D23D3A0-42CF-478B-A802-60CB3659D26D}|TestTwo\\TestTwo.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\testtwo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D23D3A0-42CF-478B-A802-60CB3659D26D}|TestTwo\\TestTwo.csproj|solutionrelative:testtwo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2D23D3A0-42CF-478B-A802-60CB3659D26D}|TestTwo\\TestTwo.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\testtwo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2D23D3A0-42CF-478B-A802-60CB3659D26D}|TestTwo\\TestTwo.csproj|solutionrelative:testtwo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}|DatabaseWcfService\\DatabaseWcfService.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasewcfservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}|DatabaseWcfService\\DatabaseWcfService.csproj|solutionrelative:databasewcfservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}|DatabaseWcfService\\DatabaseWcfService.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasewcfservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}|DatabaseWcfService\\DatabaseWcfService.csproj|solutionrelative:databasewcfservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D23D3A0-42CF-478B-A802-60CB3659D26D}|TestTwo\\TestTwo.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\testtwo\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2D23D3A0-42CF-478B-A802-60CB3659D26D}|TestTwo\\TestTwo.csproj|solutionrelative:testtwo\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D23D3A0-42CF-478B-A802-60CB3659D26D}|TestTwo\\TestTwo.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\testtwo\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2D23D3A0-42CF-478B-A802-60CB3659D26D}|TestTwo\\TestTwo.csproj|solutionrelative:testtwo\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,28 +54,132 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\wwwroot\\index.html",
-              "RelativeDocumentMoniker": "TestTwo\\wwwroot\\index.html",
-              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\wwwroot\\index.html",
-              "RelativeToolTip": "TestTwo\\wwwroot\\index.html",
-              "ViewState": "AgIAAMEAAAAAAAAAAAAAAOQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-09-22T11:54:28.84Z",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseWcfService\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "DatabaseWcfService\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseWcfService\\Properties\\launchSettings.json",
+              "RelativeToolTip": "DatabaseWcfService\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwBgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-12T07:59:19.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\wwwroot\\js\\app.js",
+              "RelativeDocumentMoniker": "TestTwo\\wwwroot\\js\\app.js",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\wwwroot\\js\\app.js",
+              "RelativeToolTip": "TestTwo\\wwwroot\\js\\app.js",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAgwMMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-12T07:39:13.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "TestTwo\\wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "TestTwo\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAzwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-12T07:39:01.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseWcfService\\appsettings.json",
+              "RelativeDocumentMoniker": "DatabaseWcfService\\appsettings.json",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseWcfService\\appsettings.json",
+              "RelativeToolTip": "DatabaseWcfService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-12T07:29:08.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "TestTwo\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\wwwroot\\index.html",
+              "RelativeToolTip": "TestTwo\\wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-10T07:46:57.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseWcfService\\Program.cs",
+              "RelativeDocumentMoniker": "DatabaseWcfService\\Program.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseWcfService\\Program.cs",
+              "RelativeToolTip": "DatabaseWcfService\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAADwvzgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T06:13:31.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatabaseService.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseWcfService\\DatabaseService.cs",
+              "RelativeDocumentMoniker": "DatabaseWcfService\\DatabaseService.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseWcfService\\DatabaseService.cs",
+              "RelativeToolTip": "DatabaseWcfService\\DatabaseService.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAywJwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T05:48:49.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\Program.cs",
               "RelativeDocumentMoniker": "TestTwo\\Program.cs",
               "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\Program.cs",
               "RelativeToolTip": "TestTwo\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-22T11:34:23.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IDatabaseService.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseWcfService\\IDatabaseService.cs",
+              "RelativeDocumentMoniker": "DatabaseWcfService\\IDatabaseService.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseWcfService\\IDatabaseService.cs",
+              "RelativeToolTip": "DatabaseWcfService\\IDatabaseService.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAmwGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T05:47:28.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "TestTwo\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\TestTwo\\Properties\\launchSettings.json",
+              "RelativeToolTip": "TestTwo\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-12T08:02:22.467Z",
               "EditorCaption": ""
             }
           ]

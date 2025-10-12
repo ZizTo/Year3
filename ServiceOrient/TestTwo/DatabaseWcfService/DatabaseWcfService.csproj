@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreWCF.Http" Version="1.8.0" />
+    <PackageReference Include="CoreWCF.WebHttp" Version="1.8.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.2" />
+    <PackageReference Include="System.ServiceModel.Http" Version="8.1.2" />
+    <PackageReference Include="System.ServiceModel.Web" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

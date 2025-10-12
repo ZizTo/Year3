@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "DatabaseWcfService\\DatabaseWcfService.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "TestTwo\\TestTwo.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      }
+    ]
+  }
+]

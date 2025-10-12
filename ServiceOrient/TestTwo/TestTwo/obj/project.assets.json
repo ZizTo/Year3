@@ -39,6 +39,58 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Abstractions/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.3.0",
+          "System.Text.Encodings.Web": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Extensions/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
+          "Microsoft.Extensions.FileProviders.Abstractions": "8.0.0",
+          "Microsoft.Net.Http.Headers": "2.3.0",
+          "System.Buffers": "4.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "compile": {
@@ -220,6 +272,25 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.FileProviders.Abstractions/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.Logging.Abstractions/8.0.3": {
         "type": "package",
         "dependencies": {
@@ -262,7 +333,7 @@
       "Microsoft.Extensions.Primitives/8.0.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0/_._": {
+          "lib/net8.0/Microsoft.Extensions.Primitives.dll": {
             "related": ".xml"
           }
         },
@@ -403,6 +474,23 @@
           }
         }
       },
+      "Microsoft.Net.Http.Headers/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0",
+          "System.Buffers": "4.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "type": "package",
         "compile": {
@@ -414,6 +502,15 @@
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "System.Buffers/4.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
         }
       },
       "System.ClientModel/1.5.1": {
@@ -594,6 +691,28 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "System.Text.Encodings.Web/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll": {
+            "assetType": "runtime",
+            "rid": "browser"
+          }
+        }
+      },
       "System.Text.Json/8.0.5": {
         "type": "package",
         "compile": {
@@ -651,6 +770,45 @@
         "lib/net8.0/Azure.Identity.xml",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.3.0": {
+      "sha512": "39r9PPrjA6s0blyFv5qarckjNkaHRA5B+3b53ybuGGNTXEj1/DStQJ4NWjFL6QTRQpL9zt7nDyKxZdJOlcnq+Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.abstractions/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.xml",
+        "microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Extensions/2.3.0": {
+      "sha512": "EY2u/wFF5jsYwGXXswfQWrSsFPmiXsniAlUWo3rv/MGYf99ZFsENDnZcQP6W3c/+xQmQXq0NauzQ7jyy+o1LDQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.extensions/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.xml",
+        "microsoft.aspnetcore.http.extensions.2.3.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.extensions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/2.3.0": {
+      "sha512": "f10WUgcsKqrkmnz6gt8HeZ7kyKjYN30PO7cSic1lPtH7paPtnQqXPOveul/SIPI43PhRD4trttg4ywnrEmmJpA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
@@ -881,6 +1039,34 @@
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/8.0.0": {
+      "sha512": "ZbaMlhJlpisjuWbvXr4LdAst/1XxH3vZ6A0BsgTphZ2L4PGuxRLz7Jr/S7mkAAnOn78Vu0fKhEgNF5JO3zfjqQ==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.abstractions/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.FileProviders.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.FileProviders.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
+        "microsoft.extensions.fileproviders.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -1213,6 +1399,19 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
+    "Microsoft.Net.Http.Headers/2.3.0": {
+      "sha512": "/M0wVg6tJUOHutWD3BMOUVZAioJVXe0tCpFiovzv0T9T12TBf4MnaHP0efO8TCr1a6O9RZgQeZ9Gdark8L9XdA==",
+      "type": "package",
+      "path": "microsoft.net.http.headers/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll",
+        "lib/netstandard2.0/Microsoft.Net.Http.Headers.xml",
+        "microsoft.net.http.headers.2.3.0.nupkg.sha512",
+        "microsoft.net.http.headers.nuspec"
+      ]
+    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "sha512": "N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
       "type": "package",
@@ -1229,6 +1428,26 @@
         "lib/netstandard2.0/Microsoft.SqlServer.Server.xml",
         "microsoft.sqlserver.server.1.0.0.nupkg.sha512",
         "microsoft.sqlserver.server.nuspec"
+      ]
+    },
+    "System.Buffers/4.6.0": {
+      "sha512": "lN6tZi7Q46zFzAbRYXTIvfXcyvQQgxnY7Xm6C6xQ9784dEL1amjM6S6Iw4ZpsvesAKnRVsM4scrDQaDqSClkjA==",
+      "type": "package",
+      "path": "system.buffers/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Buffers.targets",
+        "buildTransitive/net462/_._",
+        "lib/net462/System.Buffers.dll",
+        "lib/net462/System.Buffers.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "system.buffers.4.6.0.nupkg.sha512",
+        "system.buffers.nuspec"
       ]
     },
     "System.ClientModel/1.5.1": {
@@ -1518,6 +1737,41 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Text.Encodings.Web/8.0.0": {
+      "sha512": "yev/k9GHAEGx2Rg3/tU6MQh4HGBXJs70y7j1LaM1i/ER9po+6nnQ6RRqTJn1E7Xu0fbIFK80Nh5EoODxrbxwBQ==",
+      "type": "package",
+      "path": "system.text.encodings.web/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Text.Encodings.Web.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Text.Encodings.Web.targets",
+        "lib/net462/System.Text.Encodings.Web.dll",
+        "lib/net462/System.Text.Encodings.Web.xml",
+        "lib/net6.0/System.Text.Encodings.Web.dll",
+        "lib/net6.0/System.Text.Encodings.Web.xml",
+        "lib/net7.0/System.Text.Encodings.Web.dll",
+        "lib/net7.0/System.Text.Encodings.Web.xml",
+        "lib/net8.0/System.Text.Encodings.Web.dll",
+        "lib/net8.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
+        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.xml",
+        "runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll",
+        "runtimes/browser/lib/net7.0/System.Text.Encodings.Web.xml",
+        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll",
+        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.8.0.0.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Text.Json/8.0.5": {
       "sha512": "0f1B50Ss7rqxXiaBJyzUu9bWFOO2/zSlifZ/UNMdiIpDYe4cY4LQQicP4nirK1OS31I43rn062UIJ1Q9bpmHpg==",
       "type": "package",
@@ -1594,6 +1848,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Microsoft.AspNetCore.Http.Extensions >= 2.3.0",
       "Microsoft.Data.SqlClient >= 6.1.1"
     ]
   },
@@ -1647,6 +1902,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Extensions": {
+            "target": "Package",
+            "version": "[2.3.0, )"
+          },
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[6.1.1, )"

@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+// Важно для правильной генерации C# namespace
+option csharp_namespace = "DatabaseGrpcService";
+
+// Импортируем специальные типы, чтобы работать с динамическими данными
+import "google/protobuf/struct.proto";
+import "google/protobuf/empty.proto";
+
+// Сервис, который определяет все наши удаленные процедуры (RPC)
+service DatabaseManager {
+  rpc GetTables (google.protobuf.Empty) returns (GetTablesResponse);
+  rpc GetTableSchema (GetTableSchemaRequest) returns (GetTableSchemaResponse);
+  rpc GetTableData (GetTableDataRequest) returns (GetTableDataResponse);
+  rpc CreateTable (TableDefinition) returns (google.protobuf.Empty);
+  rpc InsertData (InsertDataRequest) returns (google.protobuf.Empty);
+}
+
+// --- Сообщения (аналоги DataContract в WCF) ---
+
+// Для GetTables
+message GetTablesResponse {
+  repeated string table_names = 1;
+}
+
+// Для GetTableSchema
+message GetTableSchemaRequest {
+  string table_name = 1;
+}
+message GetTableSchemaResponse {
+  repeated ColumnDefinition columns = 1;
+}
+
+// Для GetTableData
+message GetTableDataRequest {
+  string table_name = 1;
+}
+// map<string, Value> - это gRPC-аналог Dictionary<string, object>
+// Он позволяет передавать динамические данные (строки, числа, bool и т.д.)
+message GetTableDataResponse {
+  repeated google.protobuf.Struct rows = 1;
+}
+
+// Для CreateTable
+message TableDefinition {
+  string table_name = 1;
+  repeated ColumnDefinition columns = 2;
+}
+message ColumnDefinition {
+  string name = 1;
+  string type = 2;
+}
+
+// Для InsertData
+message InsertDataRequest {
+  string table_name = 1;
+  map<string, google.protobuf.Value> data = 2;
+}

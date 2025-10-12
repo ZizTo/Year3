@@ -2,13 +2,28 @@ using DatabaseGrpcService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Добавляем CORS
+builder.Services.AddCors(o => o.AddDefaultPolicy(builder =>
+{
+    // Разрешаем запросы от нашего будущего клиента
+    builder.WithOrigins("http://localhost:7001", "https://localhost:7002") // Укажите порты вашего клиента
+           .AllowAnyMethod()
+           .AllowAnyHeader()
+           .WithExposedHeaders("Grpc-Status", "Grpc-Message"); // Важно для gRPC-Web
+}));
+
+// Добавляем сервисы gRPC
 builder.Services.AddGrpc();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-app.MapGrpcService<GreeterService>();
-app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
+// Включаем CORS
+app.UseCors();
+
+// Включаем gRPC-Web, чтобы браузер мог общаться с сервисом
+app.UseGrpcWeb();
+
+// Регистрируем наш сервис
+app.MapGrpcService<DatabaseManagerService>().EnableGrpcWeb();
 
 app.Run();

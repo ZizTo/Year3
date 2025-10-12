@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Database Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Существующие таблицы</h2>
+        <p>Нажмите на таблицу, чтобы просмотреть и добавить в нее данные.</p>
+        <ul id="tables-list"></ul>
+    </div>
+
+    <div class="container">
+        <h2>Создать новую таблицу</h2>
+        <div id="create-table-form">
+            <p>Имя таблицы: <input type="text" id="new-table-name" placeholder="например, Products" /></p>
+            <div id="columns-container">
+                <!-- Шаблон для новой колонки -->
+            </div>
+            <button id="add-column-btn" class="btn-secondary">Добавить колонку</button>
+            <button id="create-table-btn" class="btn-primary">Создать таблицу</button>
+        </div>
+        <div id="create-status" class="status"></div>
+    </div>
+
+    <!-- Этот контейнер будет появляться при выборе таблицы -->
+    <div class="container" id="data-container" style="display:none;">
+        <h2 id="current-table-title"></h2>
+
+        <h3>Существующие данные</h3>
+        <div id="data-display"></div>
+
+        <h3>Добавить новую запись</h3>
+        <div id="data-entry-form"></div>
+        <button id="insert-data-btn" class="btn-primary">Добавить запись</button>
+        <div id="insert-status" class="status"></div>
+    </div>
+
+    <!-- Подключаем наш скрипт -->
+    <script src="js/app.js"></script>
+</body>
+</html>

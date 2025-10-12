@@ -1,0 +1,4 @@
+obj\Debug\net8.0\Protos/Database.cs \
+obj\Debug\net8.0\Protos/DatabaseGrpc.cs: C:/Users/ZizTo/.nuget/packages/grpc.tools/2.71.0/build/native/include/google/protobuf/struct.proto\
+ C:/Users/ZizTo/.nuget/packages/grpc.tools/2.71.0/build/native/include/google/protobuf/empty.proto\
+ Protos/database.proto

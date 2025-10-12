@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Новый профиль",
+    "Name": "WCF",
     "Projects": [
       {
         "Path": "DatabaseWcfService\\DatabaseWcfService.csproj",
@@ -9,6 +9,21 @@
       },
       {
         "Path": "TestTwo\\TestTwo.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      }
+    ]
+  },
+  {
+    "Name": "gRPC",
+    "Projects": [
+      {
+        "Path": "DatabaseGrpcService\\DatabaseGrpcService.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "DatabaseGrpcClientWebApp\\DatabaseGrpcClientWebApp.csproj",
         "Action": "Start",
         "DebugTarget": "http"
       }

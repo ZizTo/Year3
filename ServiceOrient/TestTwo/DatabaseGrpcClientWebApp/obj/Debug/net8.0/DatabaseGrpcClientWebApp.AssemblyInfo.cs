@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("DatabaseGrpcService")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("DatabaseGrpcClientWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa3934d4dddd2b2a7ecd671bb326759217dcffdd")]
-[assembly: System.Reflection.AssemblyProductAttribute("DatabaseGrpcService")]
-[assembly: System.Reflection.AssemblyTitleAttribute("DatabaseGrpcService")]
+[assembly: System.Reflection.AssemblyProductAttribute("DatabaseGrpcClientWebApp")]
+[assembly: System.Reflection.AssemblyTitleAttribute("DatabaseGrpcClientWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

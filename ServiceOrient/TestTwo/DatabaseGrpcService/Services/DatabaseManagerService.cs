@@ -65,7 +65,10 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
             var row = new Struct();
             for (int i = 0; i < reader.FieldCount; i++)
             {
-                row.Fields.Add(reader.GetName(i), Value.ForObject(reader.GetValue(i)));
+                // ++ ИЗМЕНЕНИЕ ЗДЕСЬ ++
+                // Было: Value.ForObject(reader.GetValue(i))
+                // Стало: ProtoConverter.ToValue(reader.GetValue(i))
+                row.Fields.Add(reader.GetName(i), ProtoConverter.ToValue(reader.GetValue(i)));
             }
             response.Rows.Add(row);
         }

@@ -95,31 +95,36 @@ async function createTable() {
 
 /** Отправляет запрос на вставку данных в таблицу */
 async function insertData() {
-    // ... (код для получения tableName и сбора данных в объект `collectedData` остается)
     const tableName = dataContainer.dataset.tableName;
-    if (!tableName) { /* ... */ }
+    if (!tableName) {
+        showStatus(insertStatusDiv, 'Имя таблицы не определено.', true);
+        return;
+    }
 
-    const collectedData = {};
+    // Собираем данные в обычный объект, как и раньше
+    const data = {};
     const form = document.getElementById('data-entry-form');
     form.querySelectorAll('[data-column-name]').forEach(input => {
         const name = input.dataset.columnName;
         const type = input.dataset.columnType.toUpperCase();
         let value = input.value;
+
         if (value === '') { value = null; }
         else if (type === 'BIT') { value = (value === 'true'); }
         else if (type === 'INT' || type === 'BIGINT' || type === 'FLOAT') { value = Number(value); }
-        collectedData[name] = value;
+        data[name] = value;
     });
 
     try {
-        // ++ ИЗМЕНЕНИЕ ЗДЕСЬ: Преобразуем объект в массив пар "ключ-значение" ++
-        const dataForApi = Object.entries(collectedData).map(([key, value]) => ({ key, value }));
+        // ++ ФИНАЛЬНОЕ ИСПРАВЛЕНИЕ ++
+        // Мы БОЛЬШЕ НЕ ПРЕОБРАЗУЕМ объект в массив.
+        // Строка `const dataForApi = ...` полностью удалена.
 
         await apiFetch(`/data`, {
             method: 'POST',
             body: {
                 tableName: tableName,
-                data: dataForApi // Отправляем массив, а не объект
+                data: data // <-- Отправляем простой объект `data` напрямую!
             }
         });
         showStatus(insertStatusDiv, 'Данные успешно добавлены!', false);

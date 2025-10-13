@@ -1,8 +1,11 @@
 using DatabaseGrpcService;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Net.Client;
 using DatabaseGrpcService.Services;
+using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
+using Grpc.Net.Client;
 using Grpc.Net.Client.Web;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -75,19 +78,31 @@ app.MapPost("/api/tables", async (CreateTableRequestBff request, DatabaseManager
 
 app.MapPost("/api/data", async (InsertDataRequestBff request, DatabaseManager.DatabaseManagerClient client) =>
 {
-    var grpcRequest = new InsertDataRequest
+    try
     {
-        TableName = request.TableName
-    };
-    foreach (var pair in request.Data)
-    {
-        // ++ ИЗМЕНЕНИЕ ЗДЕСЬ ++
-        // Было: Value.ForObject(pair.Value)
-        // Стало: ProtoConverter.ToValue(pair.Value)
-        grpcRequest.Data.Add(pair.Key, ProtoConverter.ToValue(pair.Value));
+        var grpcRequest = new InsertDataRequest { TableName = request.TableName };
+
+        // Итерируемся по парам "ключ-значение" в нашем JsonObject
+        foreach (var pair in request.Data)
+        {
+            // pair.Key - это имя поля (string)
+            // pair.Value - это JsonNode, который представляет значение
+
+            // ++ ИЗМЕНЕНИЕ ЗДЕСЬ ++
+            // "Распаковываем" JsonNode в обычный C# object
+            object? csharpValue = pair.Value is JsonValue val ? val.GetValue<object>() : null;
+
+            // Отправляем сконвертированное значение в gRPC-сервис
+            grpcRequest.Data.Add(pair.Key, ProtoConverter.ToValue(csharpValue));
+        }
+
+        await client.InsertDataAsync(grpcRequest);
+        return Results.Ok(new { message = "Data inserted successfully." });
     }
-    await client.InsertDataAsync(grpcRequest);
-    return Results.Ok(new { message = "Data inserted successfully." });
+    catch (RpcException ex)
+    {
+        return Results.Problem(detail: ex.Status.Detail, statusCode: 500, title: "gRPC Error");
+    }
 });
 
 // ... (здесь можно добавить остальные эндпоинты для schema, data, create table) ...
@@ -96,6 +111,7 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.Run();
+
 
 // Вспомогательный класс для приема JSON от клиента
 public class CreateTableRequestBff
@@ -113,5 +129,9 @@ public class ColumnDefinitionBff
 public class InsertDataRequestBff
 {
     public string TableName { get; set; } = "";
-    public Dictionary<string, object> Data { get; set; } = new();
+
+    // ++ ИЗМЕНЕНИЕ ЗДЕСЬ ++
+    // Заменяем Dictionary на JsonObject. Это специальный тип для 
+    // представления динамического JSON-объекта.
+    public JsonObject Data { get; set; } = new();
 }

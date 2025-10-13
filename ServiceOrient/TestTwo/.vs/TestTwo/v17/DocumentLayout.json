@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47BFD220-D7A8-4882-8655-E1B8FE854F61}|DatabaseGrpcClientWebApp\\DatabaseGrpcClientWebApp.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasegrpcclientwebapp\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{47BFD220-D7A8-4882-8655-E1B8FE854F61}|DatabaseGrpcClientWebApp\\DatabaseGrpcClientWebApp.csproj|solutionrelative:databasegrpcclientwebapp\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}|DatabaseGrpcService\\DatabaseGrpcService.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasegrpcservice\\services\\databasemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}|DatabaseGrpcService\\DatabaseGrpcService.csproj|solutionrelative:databasegrpcservice\\services\\databasemanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}|DatabaseGrpcService\\DatabaseGrpcService.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasegrpcservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}|DatabaseGrpcService\\DatabaseGrpcService.csproj|solutionrelative:databasegrpcservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}|DatabaseGrpcService\\DatabaseGrpcService.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasegrpcservice\\protoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}|DatabaseGrpcService\\DatabaseGrpcService.csproj|solutionrelative:databasegrpcservice\\protoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47BFD220-D7A8-4882-8655-E1B8FE854F61}|DatabaseGrpcClientWebApp\\DatabaseGrpcClientWebApp.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasegrpcclientwebapp\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{47BFD220-D7A8-4882-8655-E1B8FE854F61}|DatabaseGrpcClientWebApp\\DatabaseGrpcClientWebApp.csproj|solutionrelative:databasegrpcclientwebapp\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47BFD220-D7A8-4882-8655-E1B8FE854F61}|DatabaseGrpcClientWebApp\\DatabaseGrpcClientWebApp.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasegrpcclientwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47BFD220-D7A8-4882-8655-E1B8FE854F61}|DatabaseGrpcClientWebApp\\DatabaseGrpcClientWebApp.csproj|solutionrelative:databasegrpcclientwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}|DatabaseGrpcService\\DatabaseGrpcService.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasegrpcservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}|DatabaseGrpcService\\DatabaseGrpcService.csproj|solutionrelative:databasegrpcservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}|DatabaseGrpcService\\DatabaseGrpcService.csproj|c:\\users\\zizto\\documents\\github\\year3\\serviceorient\\testtwo\\databasegrpcservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -38,24 +42,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ProtoConverter.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcService\\ProtoConverter.cs",
+              "RelativeDocumentMoniker": "DatabaseGrpcService\\ProtoConverter.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcService\\ProtoConverter.cs",
+              "RelativeToolTip": "DatabaseGrpcService\\ProtoConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T08:59:00.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "app.js",
               "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcClientWebApp\\wwwroot\\js\\app.js",
               "RelativeDocumentMoniker": "DatabaseGrpcClientWebApp\\wwwroot\\js\\app.js",
               "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcClientWebApp\\wwwroot\\js\\app.js",
               "RelativeToolTip": "DatabaseGrpcClientWebApp\\wwwroot\\js\\app.js",
-              "ViewState": "AgIAAKAAAAAAAAAAAADwv7sAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAgwHUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-13T08:36:05.171Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcService\\appsettings.json",
               "RelativeDocumentMoniker": "DatabaseGrpcService\\appsettings.json",
@@ -68,13 +85,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DatabaseManagerService.cs",
               "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcService\\Services\\DatabaseManagerService.cs",
               "RelativeDocumentMoniker": "DatabaseGrpcService\\Services\\DatabaseManagerService.cs",
-              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcService\\Services\\DatabaseManagerService.cs*",
-              "RelativeToolTip": "DatabaseGrpcService\\Services\\DatabaseManagerService.cs*",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAYwGYAAAADAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcService\\Services\\DatabaseManagerService.cs",
+              "RelativeToolTip": "DatabaseGrpcService\\Services\\DatabaseManagerService.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAwwN8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-13T08:25:58.966Z",
               "EditorCaption": ""
@@ -87,14 +104,14 @@
               "RelativeDocumentMoniker": "DatabaseGrpcClientWebApp\\Program.cs",
               "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcClientWebApp\\Program.cs",
               "RelativeToolTip": "DatabaseGrpcClientWebApp\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAgwGkAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-13T08:16:53.366Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcService\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "DatabaseGrpcService\\Properties\\launchSettings.json",
@@ -107,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcClientWebApp\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "DatabaseGrpcClientWebApp\\Properties\\launchSettings.json",
@@ -120,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcService\\Program.cs",
               "RelativeDocumentMoniker": "DatabaseGrpcService\\Program.cs",

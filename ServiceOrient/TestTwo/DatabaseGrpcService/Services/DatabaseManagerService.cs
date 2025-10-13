@@ -2,6 +2,7 @@
 using Grpc.Core;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace DatabaseGrpcService.Services;
@@ -102,8 +103,44 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
 
     public override async Task<Empty> CreateTable(TableDefinition request, ServerCallContext context)
     {
+        // 1. Валидация входных данных
         ValidateIdentifier(request.TableName);
-        // ... (здесь логика создания таблицы, аналогичная WCF) ...
+        if (request.Columns == null || request.Columns.Count == 0)
+        {
+            // В gRPC мы выбрасываем RpcException со статусом
+            throw new RpcException(new Status(StatusCode.InvalidArgument, "Table must have at least one column."));
+        }
+
+        var columnsSql = new List<string>();
+        foreach (var col in request.Columns)
+        {
+            ValidateIdentifier(col.Name);
+            if (string.IsNullOrWhiteSpace(col.Type) || !AllowedSqlTypes.Contains(col.Type))
+            {
+                throw new RpcException(new Status(StatusCode.InvalidArgument, $"Column '{col.Name}' has an invalid or disallowed type '{col.Type}'."));
+            }
+            // Для простоты все создаваемые поля будут nullable
+            columnsSql.Add($"[{col.Name}] {col.Type} NULL");
+        }
+
+        // 2. Построение безопасного SQL-запроса
+        var createTableSql = $"CREATE TABLE [{request.TableName}] ({string.Join(", ", columnsSql)})";
+
+        // 3. Выполнение запроса
+        try
+        {
+            await using var connection = new SqlConnection(_connectionString);
+            await connection.OpenAsync();
+            await using var command = new SqlCommand(createTableSql, connection);
+            await command.ExecuteNonQueryAsync();
+        }
+        catch (SqlException ex)
+        {
+            // Если таблица уже существует или другая SQL-ошибка
+            throw new RpcException(new Status(StatusCode.AlreadyExists, $"SQL Error: {ex.Message}"));
+        }
+
+        // В случае успеха возвращаем пустой ответ
         return new Empty();
     }
 
@@ -153,12 +190,36 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
             throw new RpcException(new Status(StatusCode.InvalidArgument, $"'{identifier}' is not a valid identifier."));
     }
 
-    private static object? ConvertFromValue(Value protoValue) => protoValue.KindCase switch
+    private static object? ConvertFromValue(Value protoValue)
     {
-        Value.KindOneofCase.NullValue => DBNull.Value,
-        Value.KindOneofCase.NumberValue => protoValue.NumberValue,
-        Value.KindOneofCase.StringValue => protoValue.StringValue,
-        Value.KindOneofCase.BoolValue => protoValue.BoolValue,
-        _ => throw new RpcException(new Status(StatusCode.InvalidArgument, "Unsupported value type."))
-    };
+        switch (protoValue.KindCase)
+        {
+            case Value.KindOneofCase.NullValue:
+                return DBNull.Value;
+
+            case Value.KindOneofCase.NumberValue:
+                return protoValue.NumberValue;
+
+            case Value.KindOneofCase.BoolValue:
+                return protoValue.BoolValue;
+
+            case Value.KindOneofCase.StringValue:
+                var strValue = protoValue.StringValue;
+
+                // Пытаемся распознать строку как дату.
+                // DateTimeStyles.AdjustToUniversal важен для правильной обработки часовых поясов.
+                if (DateTime.TryParse(strValue, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal, out var dateTime))
+                {
+                    // Если получилось - возвращаем настоящий объект DateTime.
+                    // SqlParameter обожает получать DateTime и сам его правильно передаст в SQL.
+                    return dateTime;
+                }
+
+                // Если это не дата, просто возвращаем строку.
+                return strValue;
+
+            default:
+                throw new RpcException(new Status(StatusCode.InvalidArgument, "Unsupported value type."));
+        }
+    }
 }

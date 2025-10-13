@@ -20,7 +20,13 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
     public DatabaseManagerService(IConfiguration configuration)
     {
         _configuration = configuration;
-        _connectionString = _configuration.GetConnectionString("CrittersDb")!;
+        _connectionString = configuration.GetConnectionString("CrittersDb");
+        if (string.IsNullOrEmpty(_connectionString))
+        {
+            // Эта ошибка будет более информативной, если проблема в конфигурации.
+            throw new InvalidOperationException("Connection string 'CrittersDb' not found or is empty in appsettings.json.");
+        }
+
     }
 
     // Реализуем каждый метод из .proto файла
@@ -45,8 +51,26 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
     {
         ValidateIdentifier(request.TableName);
         var response = new GetTableSchemaResponse();
-        // ... (здесь логика получения схемы, аналогичная WCF) ...
-        return response; // TODO: Реализовать
+        const string sql = "SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = @tableName ORDER BY ORDINAL_POSITION";
+
+        await using var connection = new SqlConnection(_connectionString);
+        await connection.OpenAsync();
+        await using var command = new SqlCommand(sql, connection);
+        command.Parameters.AddWithValue("@tableName", request.TableName);
+
+        await using var reader = await command.ExecuteReaderAsync();
+        while (await reader.ReadAsync())
+        {
+            var type = reader.GetString(1).ToUpperInvariant();
+            if (type == "NVARCHAR" && !reader.IsDBNull(2))
+            {
+                var length = reader.GetInt32(2);
+                type = length == -1 ? "NVARCHAR(MAX)" : $"NVARCHAR({length})";
+            }
+            // Добавляем найденную колонку в ответ
+            response.Columns.Add(new ColumnDefinition { Name = reader.GetString(0), Type = type });
+        }
+        return response;
     }
 
     public override async Task<GetTableDataResponse> GetTableData(GetTableDataRequest request, ServerCallContext context)

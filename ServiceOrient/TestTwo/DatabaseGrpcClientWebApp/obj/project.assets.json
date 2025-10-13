@@ -101,6 +101,19 @@
           }
         }
       },
+      "Grpc.Net.Client.Web/2.71.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Grpc.Net.Client.Web.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Client.Web.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Grpc.Net.ClientFactory/2.49.0": {
         "type": "package",
         "dependencies": {
@@ -452,6 +465,34 @@
         "packageIcon.png"
       ]
     },
+    "Grpc.Net.Client.Web/2.71.0": {
+      "sha512": "I+S8YkAhSwXyg2fwyHC4Bhf6QR1XFTzqsMPr6KsgsI23r/J87zLUuhv1Y93nt2Vl6b3j0mZlhknmN4fMnfvGdw==",
+      "type": "package",
+      "path": "grpc.net.client.web/2.71.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.net.client.web.2.71.0.nupkg.sha512",
+        "grpc.net.client.web.nuspec",
+        "lib/net6.0/Grpc.Net.Client.Web.dll",
+        "lib/net6.0/Grpc.Net.Client.Web.pdb",
+        "lib/net6.0/Grpc.Net.Client.Web.xml",
+        "lib/net7.0/Grpc.Net.Client.Web.dll",
+        "lib/net7.0/Grpc.Net.Client.Web.pdb",
+        "lib/net7.0/Grpc.Net.Client.Web.xml",
+        "lib/net8.0/Grpc.Net.Client.Web.dll",
+        "lib/net8.0/Grpc.Net.Client.Web.pdb",
+        "lib/net8.0/Grpc.Net.Client.Web.xml",
+        "lib/netstandard2.0/Grpc.Net.Client.Web.dll",
+        "lib/netstandard2.0/Grpc.Net.Client.Web.pdb",
+        "lib/netstandard2.0/Grpc.Net.Client.Web.xml",
+        "lib/netstandard2.1/Grpc.Net.Client.Web.dll",
+        "lib/netstandard2.1/Grpc.Net.Client.Web.pdb",
+        "lib/netstandard2.1/Grpc.Net.Client.Web.xml",
+        "packageIcon.png"
+      ]
+    },
     "Grpc.Net.ClientFactory/2.49.0": {
       "sha512": "4Ac7dsrARbcs1g2vrUSUadtZ0kIGTk6yhA5ccOBjgM+RTzY3L54TgMddmeaV7/Z4f9sZn6T1ls6FmUiG8Dms+Q==",
       "type": "package",
@@ -740,7 +781,8 @@
     "net8.0": [
       "Google.Protobuf >= 3.32.1",
       "Grpc.AspNetCore >= 2.49.0",
-      "Grpc.Net.Client >= 2.49.0"
+      "Grpc.Net.Client >= 2.49.0",
+      "Grpc.Net.Client.Web >= 2.71.0"
     ]
   },
   "packageFolders": {
@@ -804,6 +846,10 @@
           "Grpc.Net.Client": {
             "target": "Package",
             "version": "[2.49.0, )"
+          },
+          "Grpc.Net.Client.Web": {
+            "target": "Package",
+            "version": "[2.71.0, )"
           }
         },
         "imports": [

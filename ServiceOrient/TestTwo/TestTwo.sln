@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTwo", "TestTwo\TestTwo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseWcfService", "DatabaseWcfService\DatabaseWcfService.csproj", "{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseGrpcService", "DatabaseGrpcService\DatabaseGrpcService.csproj", "{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseGrpcClientWebApp", "DatabaseGrpcClientWebApp\DatabaseGrpcClientWebApp.csproj", "{47BFD220-D7A8-4882-8655-E1B8FE854F61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,14 @@ Global
 		{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C1DF7DB-B183-45F4-B7DD-C98399B909B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2DCA401-0CDB-4F36-9A16-75E923BA9CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47BFD220-D7A8-4882-8655-E1B8FE854F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47BFD220-D7A8-4882-8655-E1B8FE854F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47BFD220-D7A8-4882-8655-E1B8FE854F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47BFD220-D7A8-4882-8655-E1B8FE854F61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

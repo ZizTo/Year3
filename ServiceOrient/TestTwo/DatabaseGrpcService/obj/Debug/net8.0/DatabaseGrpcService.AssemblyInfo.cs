@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatabaseGrpcService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa3934d4dddd2b2a7ecd671bb326759217dcffdd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39d89519877ac79459b6e68ab134660d1ea053b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatabaseGrpcService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatabaseGrpcService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

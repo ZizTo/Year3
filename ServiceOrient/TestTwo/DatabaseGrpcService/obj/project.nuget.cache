@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eG7Sb0yBWNE=",
+  "dgSpecHash": "wauhLHTucFM=",
   "success": true,
   "projectFilePath": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\ServiceOrient\\TestTwo\\DatabaseGrpcService\\DatabaseGrpcService.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\ZizTo\\.nuget\\packages\\grpc.aspnetcore\\2.71.0\\grpc.aspnetcore.2.71.0.nupkg.sha512",
     "C:\\Users\\ZizTo\\.nuget\\packages\\grpc.aspnetcore.server\\2.71.0\\grpc.aspnetcore.server.2.71.0.nupkg.sha512",
     "C:\\Users\\ZizTo\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.71.0\\grpc.aspnetcore.server.clientfactory.2.71.0.nupkg.sha512",
+    "C:\\Users\\ZizTo\\.nuget\\packages\\grpc.aspnetcore.web\\2.71.0\\grpc.aspnetcore.web.2.71.0.nupkg.sha512",
     "C:\\Users\\ZizTo\\.nuget\\packages\\grpc.core.api\\2.71.0\\grpc.core.api.2.71.0.nupkg.sha512",
     "C:\\Users\\ZizTo\\.nuget\\packages\\grpc.net.client\\2.71.0\\grpc.net.client.2.71.0.nupkg.sha512",
     "C:\\Users\\ZizTo\\.nuget\\packages\\grpc.net.clientfactory\\2.71.0\\grpc.net.clientfactory.2.71.0.nupkg.sha512",

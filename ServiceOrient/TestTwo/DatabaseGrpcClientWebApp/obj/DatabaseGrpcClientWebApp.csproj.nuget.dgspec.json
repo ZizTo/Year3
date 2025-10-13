@@ -61,6 +61,10 @@
             "Grpc.Net.Client": {
               "target": "Package",
               "version": "[2.49.0, )"
+            },
+            "Grpc.Net.Client.Web": {
+              "target": "Package",
+              "version": "[2.71.0, )"
             }
           },
           "imports": [

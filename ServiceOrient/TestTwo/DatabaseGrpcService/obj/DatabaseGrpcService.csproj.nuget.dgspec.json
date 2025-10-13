@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[2.71.0, )"
             },
+            "Grpc.AspNetCore.Web": {
+              "target": "Package",
+              "version": "[2.71.0, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[6.1.2, )"

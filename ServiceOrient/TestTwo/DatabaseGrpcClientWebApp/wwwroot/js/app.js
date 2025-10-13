@@ -160,24 +160,16 @@ function displayTableData(schema, data) {
         return;
     }
 
+    // schema теперь будет приходить не пустой!
     const headers = schema.map(col => `<th>${col.name}</th>`).join('');
 
-    // data - это массив массивов: [ [ {Key, Value}, ... ], [ {Key, Value}, ... ] ]
-    const rows = data.map(rowAsArrayOfPairs => {
-
-        // ++ ПРЕОБРАЗУЕМ МАССИВ ПАР В ОДИН УДОБНЫЙ ОБЪЕКТ ++
-        // Используем .reduce() для "сворачивания" массива в один объект
-        const rowAsObject = rowAsArrayOfPairs.reduce((acc, pair) => {
-            // acc - это наш накапливаемый объект (accumulator)
-            // pair - это { Key: "smth", Value: "a" }
-            acc[pair.Key] = pair.Value; // Используем PascalCase "Key" и "Value" из JSON
-            return acc;
-        }, {}); // Начинаем с пустого объекта {}
-
-        // Теперь rowAsObject выглядит так, как мы и ожидали: { smth: "a", smth2: 1, ... }
+    // ++ УПРОЩАЕМ ЛОГИКУ ЗДЕСЬ ++
+    // data - это уже массив правильных объектов [ {smth: "a", ...}, ... ]
+    // Нам больше не нужно его преобразовывать!
+    const rows = data.map(rowAsObject => {
 
         const cells = schema.map(col => {
-            // Ищем значение в нашем новом, правильном объекте, игнорируя регистр
+            // Ищем значение в объекте, игнорируя регистр
             let value = '(пусто)';
             const foundKey = Object.keys(rowAsObject).find(key => key.toLowerCase() === col.name.toLowerCase());
 

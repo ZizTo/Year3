@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 
 namespace DatabaseGrpcService.Services;
 
-// Наследуемся от авто-сгенерированного базового класса
 public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
 {
     private readonly IConfiguration _configuration;
@@ -24,13 +23,11 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
         _connectionString = configuration.GetConnectionString("CrittersDb");
         if (string.IsNullOrEmpty(_connectionString))
         {
-            // Эта ошибка будет более информативной, если проблема в конфигурации.
             throw new InvalidOperationException("Connection string 'CrittersDb' not found or is empty in appsettings.json.");
         }
 
     }
 
-    // Реализуем каждый метод из .proto файла
     public override async Task<GetTablesResponse> GetTables(Empty request, ServerCallContext context)
     {
         var response = new GetTablesResponse();
@@ -68,7 +65,6 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
                 var length = reader.GetInt32(2);
                 type = length == -1 ? "NVARCHAR(MAX)" : $"NVARCHAR({length})";
             }
-            // Добавляем найденную колонку в ответ
             response.Columns.Add(new ColumnDefinition { Name = reader.GetString(0), Type = type });
         }
         return response;
@@ -90,9 +86,6 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
             var row = new Struct();
             for (int i = 0; i < reader.FieldCount; i++)
             {
-                // ++ ИЗМЕНЕНИЕ ЗДЕСЬ ++
-                // Было: Value.ForObject(reader.GetValue(i))
-                // Стало: ProtoConverter.ToValue(reader.GetValue(i))
                 row.Fields.Add(reader.GetName(i), ProtoConverter.ToValue(reader.GetValue(i)));
             }
             response.Rows.Add(row);
@@ -103,11 +96,9 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
 
     public override async Task<Empty> CreateTable(TableDefinition request, ServerCallContext context)
     {
-        // 1. Валидация входных данных
         ValidateIdentifier(request.TableName);
         if (request.Columns == null || request.Columns.Count == 0)
         {
-            // В gRPC мы выбрасываем RpcException со статусом
             throw new RpcException(new Status(StatusCode.InvalidArgument, "Table must have at least one column."));
         }
 
@@ -119,14 +110,11 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
             {
                 throw new RpcException(new Status(StatusCode.InvalidArgument, $"Column '{col.Name}' has an invalid or disallowed type '{col.Type}'."));
             }
-            // Для простоты все создаваемые поля будут nullable
             columnsSql.Add($"[{col.Name}] {col.Type} NULL");
         }
 
-        // 2. Построение безопасного SQL-запроса
         var createTableSql = $"CREATE TABLE [{request.TableName}] ({string.Join(", ", columnsSql)})";
 
-        // 3. Выполнение запроса
         try
         {
             await using var connection = new SqlConnection(_connectionString);
@@ -136,11 +124,9 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
         }
         catch (SqlException ex)
         {
-            // Если таблица уже существует или другая SQL-ошибка
             throw new RpcException(new Status(StatusCode.AlreadyExists, $"SQL Error: {ex.Message}"));
         }
 
-        // В случае успеха возвращаем пустой ответ
         return new Empty();
     }
 

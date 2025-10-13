@@ -8,9 +8,6 @@
 using grpc = global::Grpc.Core;
 
 namespace DatabaseGrpcService {
-  /// <summary>
-  /// Сервис, который определяет все наши удаленные процедуры (RPC)
-  /// </summary>
   public static partial class DatabaseManager
   {
     static readonly string __ServiceName = "DatabaseManager";

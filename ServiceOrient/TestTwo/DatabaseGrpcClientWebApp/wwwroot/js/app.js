@@ -1,31 +1,20 @@
-﻿// js/app.js
+﻿const API_BASE_URL = '/api';
 
-// --- Конфигурация ---
-// URL нашего WCF REST-сервиса
-const API_BASE_URL = '/api';
-
-// --- Элементы DOM ---
 const tablesList = document.getElementById('tables-list');
 const createStatusDiv = document.getElementById('create-status');
 const insertStatusDiv = document.getElementById('insert-status');
 const dataContainer = document.getElementById('data-container');
 const columnsContainer = document.getElementById('columns-container');
 
-// --- Инициализация ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Привязываем события к кнопкам
     document.getElementById('add-column-btn').addEventListener('click', addColumnRow);
     document.getElementById('create-table-btn').addEventListener('click', createTable);
     document.getElementById('insert-data-btn').addEventListener('click', insertData);
 
-    // Загружаем начальные данные
     loadTables();
-    addColumnRow(); // Сразу добавляем одну строку для новой таблицы
+    addColumnRow();
 });
 
-// --- Функции для работы с API ---
-
-/** Загружает и отображает список существующих таблиц */
 async function loadTables() {
     try {
         const tables = await apiFetch('/tables');
@@ -45,16 +34,13 @@ async function loadTables() {
     }
 }
 
-/** Загружает схему и данные для выбранной таблицы и отображает их */
 async function showDataForTable(tableName) {
     try {
-        // Загружаем схему и данные одновременно
         const [schema, data] = await Promise.all([
             apiFetch(`/tables/${tableName}/schema`),
             apiFetch(`/tables/${tableName}/data`)
         ]);
 
-        // Отображаем данные и форму
         displayTableData(schema, data);
         displayDataEntryForm(tableName, schema);
 
@@ -66,7 +52,6 @@ async function showDataForTable(tableName) {
     }
 }
 
-/** Отправляет запрос на создание новой таблицы */
 async function createTable() {
     const tableName = document.getElementById('new-table-name').value;
     const columns = [];
@@ -87,13 +72,12 @@ async function createTable() {
         document.getElementById('new-table-name').value = '';
         columnsContainer.innerHTML = '';
         addColumnRow();
-        loadTables(); // Обновляем список таблиц
+        loadTables();
     } catch (error) {
         showStatus(createStatusDiv, `Ошибка создания таблицы: ${error.message}`, true);
     }
 }
 
-/** Отправляет запрос на вставку данных в таблицу */
 async function insertData() {
     const tableName = dataContainer.dataset.tableName;
     if (!tableName) {
@@ -101,7 +85,6 @@ async function insertData() {
         return;
     }
 
-    // Собираем данные в обычный объект, как и раньше
     const data = {};
     const form = document.getElementById('data-entry-form');
     form.querySelectorAll('[data-column-name]').forEach(input => {
@@ -116,15 +99,11 @@ async function insertData() {
     });
 
     try {
-        // ++ ФИНАЛЬНОЕ ИСПРАВЛЕНИЕ ++
-        // Мы БОЛЬШЕ НЕ ПРЕОБРАЗУЕМ объект в массив.
-        // Строка `const dataForApi = ...` полностью удалена.
-
         await apiFetch(`/data`, {
             method: 'POST',
             body: {
                 tableName: tableName,
-                data: data // <-- Отправляем простой объект `data` напрямую!
+                data: data
             }
         });
         showStatus(insertStatusDiv, 'Данные успешно добавлены!', false);
@@ -135,9 +114,6 @@ async function insertData() {
 }
 
 
-// --- Вспомогательные функции для UI ---
-
-/** Добавляет новую строку для определения колонки в форме создания таблицы */
 function addColumnRow() {
     const row = document.createElement('div');
     row.className = 'column-row';
@@ -157,7 +133,6 @@ function addColumnRow() {
     columnsContainer.appendChild(row);
 }
 
-/** Отображает существующие данные в виде таблицы */
 function displayTableData(schema, data) {
     const container = document.getElementById('data-display');
     if (data.length === 0) {
@@ -165,16 +140,10 @@ function displayTableData(schema, data) {
         return;
     }
 
-    // schema теперь будет приходить не пустой!
+   
     const headers = schema.map(col => `<th>${col.name}</th>`).join('');
-
-    // ++ УПРОЩАЕМ ЛОГИКУ ЗДЕСЬ ++
-    // data - это уже массив правильных объектов [ {smth: "a", ...}, ... ]
-    // Нам больше не нужно его преобразовывать!
     const rows = data.map(rowAsObject => {
-
         const cells = schema.map(col => {
-            // Ищем значение в объекте, игнорируя регистр
             let value = '(пусто)';
             const foundKey = Object.keys(rowAsObject).find(key => key.toLowerCase() === col.name.toLowerCase());
 
@@ -192,9 +161,8 @@ function displayTableData(schema, data) {
     container.innerHTML = `<table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
 }
 
-/** Создает и отображает форму для ввода новой записи */
 function displayDataEntryForm(tableName, schema) {
-    dataContainer.dataset.tableName = tableName; // Сохраняем имя таблицы
+    dataContainer.dataset.tableName = tableName;
     const form = document.getElementById('data-entry-form');
     form.innerHTML = '';
     document.getElementById('current-table-title').textContent = `Таблица: ${tableName}`;
@@ -216,27 +184,18 @@ function displayDataEntryForm(tableName, schema) {
         }
 
         input.dataset.columnName = col.name;
-        input.dataset.columnType = col.type; // Сохраняем тип для парсинга
+        input.dataset.columnType = col.type;
         p.appendChild(input);
         form.appendChild(p);
     });
 }
 
-/** Отображает сообщение о статусе операции */
 function showStatus(element, message, isError = false) {
     element.textContent = message;
     element.className = isError ? 'status error' : 'status success';
     element.style.display = 'block';
 }
 
-// --- Универсальная функция для отправки запросов к API ---
-
-/**
- * Отправляет запрос к WCF API и обрабатывает ответы.
- * @param {string} endpoint - Путь к ресурсу (например, '/tables').
- * @param {object} [options] - Настройки fetch (method, body, etc.).
- * @returns {Promise<any>} - Распарсенный JSON-ответ.
- */
 async function apiFetch(endpoint, options = {}) {
     const url = `${API_BASE_URL}${endpoint}`;
     console.log(url);
@@ -255,13 +214,11 @@ async function apiFetch(endpoint, options = {}) {
     const response = await fetch(url, config);
 
     if (!response.ok) {
-        // Если сервер вернул ошибку, пытаемся извлечь наше кастомное сообщение
         const errorData = await response.json();
         const errorMessage = errorData?.Message || `HTTP Error: ${response.status}`;
         throw new Error(errorMessage);
     }
 
-    // Для POST-запросов без ответа (204 No Content) или других успешных статусов без тела
     if (response.status === 204 || response.headers.get("Content-Length") === "0") {
         return null;
     }

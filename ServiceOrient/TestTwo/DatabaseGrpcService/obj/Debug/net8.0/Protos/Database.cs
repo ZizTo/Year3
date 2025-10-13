@@ -63,9 +63,6 @@ namespace DatabaseGrpcService {
 
   }
   #region Messages
-  /// <summary>
-  /// Äëÿ GetTables
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTablesResponse : pb::IMessage<GetTablesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -253,9 +250,6 @@ namespace DatabaseGrpcService {
 
   }
 
-  /// <summary>
-  /// Äëÿ GetTableSchema
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTableSchemaRequest : pb::IMessage<GetTableSchemaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -641,9 +635,6 @@ namespace DatabaseGrpcService {
 
   }
 
-  /// <summary>
-  /// Äëÿ GetTableData
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTableDataRequest : pb::IMessage<GetTableDataRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

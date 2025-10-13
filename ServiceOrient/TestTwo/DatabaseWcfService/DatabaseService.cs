@@ -1,5 +1,4 @@
-﻿// DatabaseService.cs
-using CoreWCF;
+﻿using CoreWCF;
 using CoreWCF.Web;
 using Microsoft.Data.SqlClient;
 using System.Data;
@@ -14,10 +13,8 @@ public class DatabaseService : IDatabaseService
     private readonly IConfiguration _configuration;
     private readonly string _connectionString;
 
-    // Безопасный Regex для имен таблиц и столбцов (начинается с буквы/_, далее буквы, цифры, _)
     private static readonly Regex SafeIdentifierRegex = new(@"^[a-zA-Z_][a-zA-Z0-9_]{0,127}$", RegexOptions.Compiled);
 
-    // Белый список разрешенных типов данных SQL
     private static readonly HashSet<string> AllowedSqlTypes = new(StringComparer.OrdinalIgnoreCase)
     {
         "NVARCHAR(255)", "NVARCHAR(MAX)", "INT", "BIGINT", "BIT", "DATETIME2", "FLOAT"
@@ -75,7 +72,7 @@ public class DatabaseService : IDatabaseService
     {
         ValidateIdentifier(tableName);
         var rows = new List<Dictionary<string, object>>();
-        var sql = $"SELECT * FROM [{tableName}]"; // Валидация выше защищает от инъекции
+        var sql = $"SELECT * FROM [{tableName}]";
 
         await using var connection = new SqlConnection(_connectionString);
         await connection.OpenAsync();
@@ -96,14 +93,12 @@ public class DatabaseService : IDatabaseService
 
     public async Task CreateTableAsync(TableDefinition tableDef)
     {
-        // 1. Валидация входных данных
         ValidateIdentifier(tableDef.tableName);
         if (tableDef.columns == null || tableDef.columns.Count == 0)
         {
             ThrowFault("BAD_REQUEST", "Table must have at least one column.", HttpStatusCode.BadRequest);
         }
 
-        // 2. Построение безопасного SQL-запроса
         var columnsSql = new List<string>();
         foreach (var col in tableDef.columns)
         {
@@ -112,12 +107,11 @@ public class DatabaseService : IDatabaseService
             {
                 ThrowFault("BAD_REQUEST", $"Column '{col.name}' has an invalid or disallowed type '{col.type}'.", HttpStatusCode.BadRequest);
             }
-            columnsSql.Add($"[{col.name}] {col.type} NULL"); // Для простоты все поля nullable
+            columnsSql.Add($"[{col.name}] {col.type} NULL");
         }
 
         var createTableSql = $"CREATE TABLE [{tableDef.tableName}] ({string.Join(", ", columnsSql)})";
 
-        // 3. Выполнение запроса
         try
         {
             await using var connection = new SqlConnection(_connectionString);
@@ -127,14 +121,14 @@ public class DatabaseService : IDatabaseService
         }
         catch (SqlException ex)
         {
-            ThrowFault("DB_ERROR", $"SQL Error: {ex.Message}", HttpStatusCode.Conflict); // 409 Conflict если таблица уже есть
+            ThrowFault("DB_ERROR", $"SQL Error: {ex.Message}", HttpStatusCode.Conflict);
         }
     }
 
     public async Task InsertDataAsync(DataInsertionRequest request)
     {
         var tableName = request.tableName;
-        var data = request.data; // Теперь это List<KeyValue>
+        var data = request.data; 
 
         ValidateIdentifier(tableName);
         if (data == null || data.Count == 0)
@@ -146,8 +140,7 @@ public class DatabaseService : IDatabaseService
         var parameterNames = new List<string>();
         var parameters = new List<SqlParameter>();
 
-        // ++ ИЗМЕНЯЕМ ЦИКЛ ЗДЕСЬ ++
-        foreach (var pair in data) // Раньше было foreach (var pair in data)
+        foreach (var pair in data)
         {
             ValidateIdentifier(pair.key);
             columnNames.Add($"[{pair.key}]");
@@ -172,8 +165,6 @@ public class DatabaseService : IDatabaseService
         }
     }
 
-    // --- Приватные хелперы ---
-
     private static void ValidateIdentifier(string? identifier)
     {
         if (string.IsNullOrWhiteSpace(identifier) || !SafeIdentifierRegex.IsMatch(identifier))
@@ -188,13 +179,12 @@ public class DatabaseService : IDatabaseService
         {
             return System.DBNull.Value;
         }
-        // CoreWCF десериализует JSON числа в Int64 (long), а не Int32 (int)
         if (rawValue is long l)
         {
             if (l <= int.MaxValue && l >= int.MinValue) return (int)l;
-            return l; // Остается как bigint
+            return l;
         }
-        return rawValue; // Остальные типы (string, bool, double) передаются как есть
+        return rawValue;
     }
 
     private static void ThrowFault(string code, string message, HttpStatusCode statusCode)

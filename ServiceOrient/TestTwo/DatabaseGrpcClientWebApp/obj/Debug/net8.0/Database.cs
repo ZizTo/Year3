@@ -63,9 +63,6 @@ namespace DatabaseGrpcService {
 
   }
   #region Messages
-  /// <summary>
-  /// Для GetTables
-  /// </summary>
   public sealed partial class GetTablesResponse : pb::IMessage<GetTablesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -244,9 +241,6 @@ namespace DatabaseGrpcService {
 
   }
 
-  /// <summary>
-  /// Для GetTableSchema
-  /// </summary>
   public sealed partial class GetTableSchemaRequest : pb::IMessage<GetTableSchemaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -614,9 +608,6 @@ namespace DatabaseGrpcService {
 
   }
 
-  /// <summary>
-  /// Для GetTableData
-  /// </summary>
   public sealed partial class GetTableDataRequest : pb::IMessage<GetTableDataRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -806,10 +797,6 @@ namespace DatabaseGrpcService {
 
   }
 
-  /// <summary>
-  /// map&lt;string, Value> - это gRPC-аналог Dictionary&lt;string, object>
-  /// Он позволяет передавать динамические данные (строки, числа, bool и т.д.)
-  /// </summary>
   public sealed partial class GetTableDataResponse : pb::IMessage<GetTableDataResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -988,9 +975,6 @@ namespace DatabaseGrpcService {
 
   }
 
-  /// <summary>
-  /// Для CreateTable
-  /// </summary>
   public sealed partial class TableDefinition : pb::IMessage<TableDefinition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1432,9 +1416,6 @@ namespace DatabaseGrpcService {
 
   }
 
-  /// <summary>
-  /// Для InsertData
-  /// </summary>
   public sealed partial class InsertDataRequest : pb::IMessage<InsertDataRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

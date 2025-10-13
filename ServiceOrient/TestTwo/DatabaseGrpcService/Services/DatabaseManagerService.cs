@@ -169,7 +169,6 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
         return new Empty();
     }
 
-    // --- Вспомогательные методы ---
     private static void ValidateIdentifier(string identifier)
     {
         if (string.IsNullOrWhiteSpace(identifier) || !SafeIdentifierRegex.IsMatch(identifier))
@@ -192,16 +191,11 @@ public class DatabaseManagerService : DatabaseManager.DatabaseManagerBase
             case Value.KindOneofCase.StringValue:
                 var strValue = protoValue.StringValue;
 
-                // Пытаемся распознать строку как дату.
-                // DateTimeStyles.AdjustToUniversal важен для правильной обработки часовых поясов.
                 if (DateTime.TryParse(strValue, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal, out var dateTime))
                 {
-                    // Если получилось - возвращаем настоящий объект DateTime.
-                    // SqlParameter обожает получать DateTime и сам его правильно передаст в SQL.
                     return dateTime;
                 }
 
-                // Если это не дата, просто возвращаем строку.
                 return strValue;
 
             default:

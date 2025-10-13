@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatabaseGrpcClientWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f25a0662243bf63f7c3f309518332a3c219cf68e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c3aea39f1f33695f607573ce722ba6ce47051dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatabaseGrpcClientWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatabaseGrpcClientWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

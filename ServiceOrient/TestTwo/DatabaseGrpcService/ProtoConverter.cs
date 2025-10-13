@@ -2,13 +2,11 @@
 using System.Data;
 using System.Globalization;
 
-namespace DatabaseGrpcService.Services; // Убедитесь, что namespace совпадает с вашим проектом
+namespace DatabaseGrpcService.Services;
 
 public static class ProtoConverter
 {
-    /// <summary>
-    /// Преобразует стандартный C# object в Google.Protobuf.WellKnownTypes.Value.
-    /// </summary>
+    // C# object to Google.Protobuf.WellKnownTypes.Value
     public static Value ToValue(object? value)
     {
         if (value is null || value is DBNull)
@@ -25,19 +23,14 @@ public static class ProtoConverter
             case long l: return Value.ForNumber(l);
             case decimal m: return Value.ForNumber((double)m);
 
-            // ++ ИЗМЕНЕНИЕ ЗДЕСЬ ++
             case string s:
-                // Пытаемся распознать, не является ли строка датой в формате HTML-инпута
                 if (DateTime.TryParse(s, CultureInfo.InvariantCulture, DateTimeStyles.None, out var dtFromString))
                 {
-                    // Если получилось - форматируем в универсальный стандарт, понятный SQL
                     return Value.ForString(dtFromString.ToUniversalTime().ToString("o"));
                 }
-                // Если это не дата, просто возвращаем строку
                 return Value.ForString(s);
 
             case DateTime dt:
-                // Если тип уже DateTime, сразу форматируем правильно
                 return Value.ForString(dt.ToUniversalTime().ToString("o"));
 
             default:
@@ -53,7 +46,6 @@ public static class ProtoConverter
             Value.KindOneofCase.NumberValue => value.NumberValue,
             Value.KindOneofCase.StringValue => value.StringValue,
             Value.KindOneofCase.BoolValue => value.BoolValue,
-            // Для сложных типов (Struct, List) можно добавить логику здесь, но для нашей задачи этого достаточно.
             _ => null
         };
     }

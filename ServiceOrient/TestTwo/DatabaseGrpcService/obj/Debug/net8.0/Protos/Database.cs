@@ -833,10 +833,6 @@ namespace DatabaseGrpcService {
 
   }
 
-  /// <summary>
-  /// map&lt;string, Value> - это gRPC-аналог Dictionary&lt;string, object>
-  /// Он позволяет передавать динамические данные (строки, числа, bool и т.д.)
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTableDataResponse : pb::IMessage<GetTableDataResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1024,9 +1020,6 @@ namespace DatabaseGrpcService {
 
   }
 
-  /// <summary>
-  /// Для CreateTable
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableDefinition : pb::IMessage<TableDefinition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1486,9 +1479,6 @@ namespace DatabaseGrpcService {
 
   }
 
-  /// <summary>
-  /// Для InsertData
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InsertDataRequest : pb::IMessage<InsertDataRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

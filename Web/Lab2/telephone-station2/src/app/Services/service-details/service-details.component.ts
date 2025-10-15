@@ -1,5 +1,3 @@
-// src/app/Services/service-details/service-details.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -12,8 +10,8 @@ import { StationService } from '../services/station.service';
   selector: 'app-service-details',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './service-details.html', // Убедитесь, что расширение правильное
-  styleUrl: './service-details.css'   // Убедитесь, что расширение правильное
+  templateUrl: './service-details.html',
+  styleUrl: './service-details.css'
 })
 export class ServiceDetailsComponent implements OnInit {
   

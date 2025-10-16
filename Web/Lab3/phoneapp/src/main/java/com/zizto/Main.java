@@ -23,7 +23,7 @@ public class Main {
             System.out.print("Выберите действие: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Очистка буфера
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -46,9 +46,9 @@ public class Main {
                     System.out.print("Введите ID абонента: ");
                     int subIdForBill = scanner.nextInt();
                     System.out.println("--- Неоплаченный счет абонента ID " + subIdForBill + " ---");
-                    Bill bill = billDao.getUnpaidBillBySubscriberId(subIdForBill);
-                    if (bill != null) {
-                        System.out.println(bill);
+                    List<Bill> bills = billDao.getUnpaidBillBySubscriberId(subIdForBill);
+                    if (!bills.isEmpty()) {
+                        bills.forEach(System.out::println);
                     } else {
                         System.out.println("Неоплаченных счетов для данного абонента не найдено.");
                     }

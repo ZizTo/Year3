@@ -7,7 +7,6 @@ public class Service {
     private String name;
     private BigDecimal monthlyCost;
     
-    // Геттеры, сеттеры и toString()
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public String getName() { return name; }

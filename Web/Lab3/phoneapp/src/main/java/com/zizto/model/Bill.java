@@ -10,7 +10,6 @@ public class Bill {
     private Date issueDate;
     private boolean isPaid;
 
-    // Геттеры, сеттеры и toString()
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public int getSubscriberId() { return subscriberId; }

@@ -22,10 +22,7 @@ public class JdbcConnector {
             url = properties.getProperty("db.url");
             user = properties.getProperty("db.user");
             password = properties.getProperty("db.password");
-            System.out.println(url);
-            System.out.println(user);
-            System.out.println(password);
-            // Загружаем драйвер один раз при инициализации класса
+            
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
         } catch (IOException | ClassNotFoundException e) {

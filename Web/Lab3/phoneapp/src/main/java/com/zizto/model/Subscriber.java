@@ -6,7 +6,6 @@ public class Subscriber {
     private String phoneNumber;
     private boolean isBlocked;
 
-    // Геттеры, сеттеры и toString()
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public String getFullName() { return fullName; }

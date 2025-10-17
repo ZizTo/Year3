@@ -6,3 +6,5 @@ com\zizto\Main.class
 com\zizto\dao\BillDao.class
 com\zizto\model\Bill.class
 com\zizto\model\Service.class
+com\zizto\util\ConnectionPool.class
+com\zizto\exception\DAOException.class

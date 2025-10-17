@@ -1,5 +1,6 @@
 package com.zizto.util;
 
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -7,7 +8,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+//import org.slf4j.LoggerFactory;
+
 public class JdbcConnector {
+    
+
     private static Properties properties = new Properties();
     private static String url;
     private static String user;

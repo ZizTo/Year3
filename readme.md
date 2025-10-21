@@ -1,1 +1,1 @@
-study repository 
+study repository. Anyone can use

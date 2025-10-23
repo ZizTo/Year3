@@ -1,0 +1,10 @@
+﻿  Lab2.cpp
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab2\Lab2\Lab2\Lab2.cpp(23,12): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab2\Lab2\Lab2\Lab2.cpp(115,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab2\Lab2\Lab2\Lab2.cpp(170,37): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab2\Lab2\Lab2\Lab2.cpp(229,37): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab2\Lab2\Lab2\Lab2.cpp(318,13): warning C4566: символ, представленный универсальным именем символа "\u03C7", невозможно представить в текущей кодовой странице (1251)
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab2\Lab2\Lab2\Lab2.cpp(318,13): warning C4566: символ, представленный универсальным именем символа "\u00B2", невозможно представить в текущей кодовой странице (1251)
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab2\Lab2\Lab2\Lab2.cpp(322,13): warning C4566: символ, представленный универсальным именем символа "\u03C7", невозможно представить в текущей кодовой странице (1251)
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab2\Lab2\Lab2\Lab2.cpp(322,13): warning C4566: символ, представленный универсальным именем символа "\u00B2", невозможно представить в текущей кодовой странице (1251)
+  Lab2.vcxproj -> C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab2\Lab2\x64\Debug\Lab2.exe

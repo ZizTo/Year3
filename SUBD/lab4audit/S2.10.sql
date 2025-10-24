@@ -1,0 +1,1 @@
+select DATEDIFF(month, getdate(), '2006-06-09')

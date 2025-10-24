@@ -1,0 +1,1 @@
+select DATEDIFF(day, getdate(), '2025-12-25')

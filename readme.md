@@ -1,1 +1,1 @@
-study repository.
+Repository for study

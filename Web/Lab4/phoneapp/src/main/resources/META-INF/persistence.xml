@@ -1,0 +1,28 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit name="phone-station-pu" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <class>com.zizto.model.Subscriber</class>
+        <class>com.zizto.model.Service</class>
+        <class>com.zizto.model.Bill</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:sqlserver://DESKTOP-TC60A93;instanceName=SQLEXPRESS;databaseName=PhoneStationDB;encrypt=true;trustServerCertificate=true;"/>
+
+            <property name="jakarta.persistence.jdbc.user" value="lab1u"/>
+            <property name="jakarta.persistence.jdbc.password" value="lab1uPass"/>
+
+            <property name="eclipselink.target-database" value="SQLServer"/>
+
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

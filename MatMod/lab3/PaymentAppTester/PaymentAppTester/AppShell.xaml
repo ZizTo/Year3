@@ -1,0 +1,24 @@
+<!-- AppShell.xaml -->
+<Shell
+    x:Class="PaymentAppTester.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:PaymentAppTester.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="PaymentAppTester">
+
+    <TabBar>
+        <Tab Title="Настройки" Icon="settings.png">
+            <ShellContent ContentTemplate="{DataTemplate views:SettingsView}" />
+        </Tab>
+
+        <Tab Title="Биллинг" Icon="billing.png">
+            <ShellContent ContentTemplate="{DataTemplate views:BillingView}" />
+        </Tab>
+
+        <Tab Title="Управление" Icon="manage.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ManagementView}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

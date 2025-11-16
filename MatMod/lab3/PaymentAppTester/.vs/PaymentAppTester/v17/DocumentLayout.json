@@ -1,0 +1,383 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\views\\billingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\views\\billingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\views\\managementview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\views\\managementview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\views\\settingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\views\\settingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ZizTo\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.100\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\paymentapptester.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\paymentapptester.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\views\\settingsview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\views\\settingsview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\views\\settingsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\views\\settingsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\views\\billingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\views\\billingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\views\\billingview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\views\\billingview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\views\\managementview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\views\\managementview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\views\\managementview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\views\\managementview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\viewmodels\\settingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\viewmodels\\settingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\viewmodels\\managementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\viewmodels\\managementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\viewmodels\\billingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\viewmodels\\billingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\services\\paymentapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\services\\paymentapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\services\\iapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\services\\iapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\services\\appstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\services\\appstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|c:\\users\\zizto\\documents\\github\\year3\\matmod\\lab3\\paymentapptester\\paymentapptester\\services\\apiexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39965774-0E33-40B5-BD9B-D9D78FAEBE26}|PaymentAppTester\\PaymentAppTester.csproj|solutionrelative:paymentapptester\\services\\apiexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f96a0d64-71fd-316f-b663-924c78154f2a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SettingsView.xaml",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\SettingsView.xaml",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Views\\SettingsView.xaml",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\SettingsView.xaml",
+              "RelativeToolTip": "PaymentAppTester\\Views\\SettingsView.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAxwBIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-08T14:34:39.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Microsoft.Maui.Controls.targets",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.100\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.100\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
+              "ToolTip": "C:\\Users\\ZizTo\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.100\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.100\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAhwJ0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-11-08T14:33:46.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SettingsView.xaml",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\SettingsView.xaml",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Views\\SettingsView.xaml",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\SettingsView.xaml",
+              "RelativeToolTip": "PaymentAppTester\\Views\\SettingsView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-08T14:27:50.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PaymentAppTester",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\PaymentAppTester.csproj",
+              "RelativeDocumentMoniker": "PaymentAppTester\\PaymentAppTester.csproj",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\PaymentAppTester.csproj",
+              "RelativeToolTip": "PaymentAppTester\\PaymentAppTester.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-08T14:25:44.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BillingView.xaml",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\BillingView.xaml",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Views\\BillingView.xaml",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\BillingView.xaml",
+              "RelativeToolTip": "PaymentAppTester\\Views\\BillingView.xaml",
+              "ViewState": "AgIAAAgAAAAAAAAAAIAzwAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-08T14:06:10.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManagementView.xaml",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\ManagementView.xaml",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Views\\ManagementView.xaml",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\ManagementView.xaml",
+              "RelativeToolTip": "PaymentAppTester\\Views\\ManagementView.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAIAzwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-08T13:59:40.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SettingsView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\SettingsView.xaml.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Views\\SettingsView.xaml.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\SettingsView.xaml.cs",
+              "RelativeToolTip": "PaymentAppTester\\Views\\SettingsView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:59:25.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BillingView.xaml",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\BillingView.xaml",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Views\\BillingView.xaml",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\BillingView.xaml",
+              "RelativeToolTip": "PaymentAppTester\\Views\\BillingView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-08T14:00:09.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\App.xaml.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\App.xaml.cs",
+              "RelativeToolTip": "PaymentAppTester\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:36:20.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\AppShell.xaml.cs",
+              "RelativeToolTip": "PaymentAppTester\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:36:24.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\MauiProgram.cs",
+              "RelativeToolTip": "PaymentAppTester\\MauiProgram.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAIAzwBwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:04:31.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BillingView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\BillingView.xaml.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Views\\BillingView.xaml.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\BillingView.xaml.cs",
+              "RelativeToolTip": "PaymentAppTester\\Views\\BillingView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:41:21.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ManagementView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\ManagementView.xaml.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Views\\ManagementView.xaml.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\ManagementView.xaml.cs",
+              "RelativeToolTip": "PaymentAppTester\\Views\\ManagementView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:41:39.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ManagementView.xaml",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\ManagementView.xaml",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Views\\ManagementView.xaml",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Views\\ManagementView.xaml",
+              "RelativeToolTip": "PaymentAppTester\\Views\\ManagementView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-08T13:50:09.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\AppShell.xaml",
+              "RelativeDocumentMoniker": "PaymentAppTester\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\AppShell.xaml",
+              "RelativeToolTip": "PaymentAppTester\\AppShell.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-08T12:59:27.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SettingsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\ViewModels\\SettingsViewModel.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\ViewModels\\SettingsViewModel.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\ViewModels\\SettingsViewModel.cs",
+              "RelativeToolTip": "PaymentAppTester\\ViewModels\\SettingsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:01:55.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ManagementViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\ViewModels\\ManagementViewModel.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\ViewModels\\ManagementViewModel.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\ViewModels\\ManagementViewModel.cs",
+              "RelativeToolTip": "PaymentAppTester\\ViewModels\\ManagementViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:03:55.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BillingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\ViewModels\\BillingViewModel.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\ViewModels\\BillingViewModel.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\ViewModels\\BillingViewModel.cs",
+              "RelativeToolTip": "PaymentAppTester\\ViewModels\\BillingViewModel.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAkwA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:02:40.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PaymentApiService.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Services\\PaymentApiService.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Services\\PaymentApiService.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Services\\PaymentApiService.cs",
+              "RelativeToolTip": "PaymentAppTester\\Services\\PaymentApiService.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:10:37.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IApiService.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Services\\IApiService.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Services\\IApiService.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Services\\IApiService.cs",
+              "RelativeToolTip": "PaymentAppTester\\Services\\IApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:10:34.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ApiException.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Services\\ApiException.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Services\\ApiException.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Services\\ApiException.cs",
+              "RelativeToolTip": "PaymentAppTester\\Services\\ApiException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T13:06:59.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AppStateService.cs",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Services\\AppStateService.cs",
+              "RelativeDocumentMoniker": "PaymentAppTester\\Services\\AppStateService.cs",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MatMod\\lab3\\PaymentAppTester\\PaymentAppTester\\Services\\AppStateService.cs",
+              "RelativeToolTip": "PaymentAppTester\\Services\\AppStateService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T12:55:42.629Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

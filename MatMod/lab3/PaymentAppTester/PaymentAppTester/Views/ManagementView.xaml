@@ -1,0 +1,29 @@
+﻿<!-- Views/ManagementView.xaml -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaymentAppTester.Views.ManagementView"
+             xmlns:vm="clr-namespace:PaymentAppTester.ViewModels"
+             x:DataType="vm:ManagementViewModel"
+             Title="Управление">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+
+            <Label Text="Текущее состояние" FontSize="Title" />
+            <Label Text="{Binding AppState.PaymentArtifact, StringFormat='Артефакт: {0}'}" />
+            <Label Text="{Binding AppState.Token, StringFormat='Токен: {0}'}" />
+
+            <Button Text="Получить инфо об оплате" Command="{Binding GetInfoCommand}" IsEnabled="{Binding IsNotBusy}" Margin="0,20,0,0"/>
+            <Button Text="Обновить токен" Command="{Binding ResetTokenCommand}" IsEnabled="{Binding IsNotBusy}" />
+
+            <Frame Margin="0,20,0,0" Padding="10">
+                <VerticalStackLayout>
+                    <Label Text="Ответ от API:" />
+                    <Editor Text="{Binding ResultText}" IsReadOnly="True" HeightRequest="200" AutoSize="Disabled" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Text="{Binding ErrorMessage}" TextColor="Red"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

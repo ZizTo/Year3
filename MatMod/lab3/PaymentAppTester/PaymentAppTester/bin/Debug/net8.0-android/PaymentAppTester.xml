@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PaymentAppTester</name>
+    </assembly>
+    <members>
+        <member name="T:PaymentAppTester.Services.ApiException">
+            <summary>
+            Представляет ошибки, которые происходят во время вызова API,
+            и содержит конкретное сообщение об ошибке от сервера.
+            </summary>
+        </member>
+        <member name="T:PaymentAppTester.Services.AppStateService">
+            <inheritdoc/>
+        </member>
+        <member name="P:PaymentAppTester.Services.AppStateService.ApiBaseUrl">
+            <inheritdoc cref="F:PaymentAppTester.Services.AppStateService._apiBaseUrl"/>
+        </member>
+        <member name="P:PaymentAppTester.Services.AppStateService.PaymentArtifact">
+            <inheritdoc cref="F:PaymentAppTester.Services.AppStateService._paymentArtifact"/>
+        </member>
+        <member name="P:PaymentAppTester.Services.AppStateService.Token">
+            <inheritdoc cref="F:PaymentAppTester.Services.AppStateService._token"/>
+        </member>
+        <member name="M:PaymentAppTester.Services.IApiService.SetBaseUrl(System.String)">
+            <summary>
+            Устанавливает базовый URL для всех запросов к API.
+            </summary>
+            <param name="baseUrl">Адрес API, например, "http://192.168.1.100:5000"</param>
+        </member>
+        <member name="M:PaymentAppTester.Services.IApiService.GetBillAsync(GetBillRequest)">
+            <summary>
+            Отправляет запрос на выставление счета.
+            </summary>
+        </member>
+        <member name="M:PaymentAppTester.Services.IApiService.PayAsync(PayRequest)">
+            <summary>
+            Отправляет запрос на оплату счета.
+            </summary>
+        </member>
+        <member name="M:PaymentAppTester.Services.IApiService.GetPaymentInfoAsync(PaymentInfoRequest)">
+            <summary>
+            Отправляет запрос на получение информации об оплате.
+            </summary>
+        </member>
+        <member name="M:PaymentAppTester.Services.IApiService.ResetTokenAsync(TokenRequest)">
+            <summary>
+            Отправляет запрос на сброс/обновление токена.
+            </summary>
+        </member>
+        <member name="M:PaymentAppTester.Services.PaymentApiService.PostAsync``2(System.Uri,``0)">
+            <summary>
+            Универсальный метод для выполнения POST-запросов и обработки ответов.
+            </summary>
+            <typeparam name="TRequest">Тип объекта запроса</typeparam>
+            <typeparam name="TResponse">Тип ожидаемого объекта ответа</typeparam>
+            <param name="uri">Конечный URI эндпоинта</param>
+            <param name="data">Объект запроса для отправки</param>
+            <returns>Десериализованный объект ответа</returns>
+        </member>
+        <member name="T:PaymentAppTester.ViewModels.BillingViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.IsBusy">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.BillingViewModel._isBusy"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.ErrorMessage">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.BillingViewModel._errorMessage"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.ServiceName">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.BillingViewModel._serviceName"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.MethodsText">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.BillingViewModel._methodsText"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.DateFrom">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.BillingViewModel._dateFrom"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.DateTo">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.BillingViewModel._dateTo"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.PaymentArtifact">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.BillingViewModel._paymentArtifact"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.TotalPrice">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.BillingViewModel._totalPrice"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.Token">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.BillingViewModel._token"/>
+        </member>
+        <member name="F:PaymentAppTester.ViewModels.BillingViewModel.getBillCommand">
+            <summary>The backing field for <see cref="P:PaymentAppTester.ViewModels.BillingViewModel.GetBillCommand"/>.</summary>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.GetBillCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:PaymentAppTester.ViewModels.BillingViewModel.GetBillAsync"/>.</summary>
+        </member>
+        <member name="F:PaymentAppTester.ViewModels.BillingViewModel.payCommand">
+            <summary>The backing field for <see cref="P:PaymentAppTester.ViewModels.BillingViewModel.PayCommand"/>.</summary>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.BillingViewModel.PayCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:PaymentAppTester.ViewModels.BillingViewModel.PayAsync"/>.</summary>
+        </member>
+        <member name="T:PaymentAppTester.ViewModels.ManagementViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.ManagementViewModel.IsBusy">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.ManagementViewModel._isBusy"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.ManagementViewModel.ErrorMessage">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.ManagementViewModel._errorMessage"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.ManagementViewModel.ResultText">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.ManagementViewModel._resultText"/>
+        </member>
+        <member name="F:PaymentAppTester.ViewModels.ManagementViewModel.getInfoCommand">
+            <summary>The backing field for <see cref="P:PaymentAppTester.ViewModels.ManagementViewModel.GetInfoCommand"/>.</summary>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.ManagementViewModel.GetInfoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:PaymentAppTester.ViewModels.ManagementViewModel.GetInfoAsync"/>.</summary>
+        </member>
+        <member name="F:PaymentAppTester.ViewModels.ManagementViewModel.resetTokenCommand">
+            <summary>The backing field for <see cref="P:PaymentAppTester.ViewModels.ManagementViewModel.ResetTokenCommand"/>.</summary>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.ManagementViewModel.ResetTokenCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:PaymentAppTester.ViewModels.ManagementViewModel.ResetTokenAsync"/>.</summary>
+        </member>
+        <member name="T:PaymentAppTester.ViewModels.SettingsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.SettingsViewModel.ApiUrl">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.SettingsViewModel._apiUrl"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.SettingsViewModel.StatusMessage">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.SettingsViewModel._statusMessage"/>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.SettingsViewModel.StatusColor">
+            <inheritdoc cref="F:PaymentAppTester.ViewModels.SettingsViewModel._statusColor"/>
+        </member>
+        <member name="F:PaymentAppTester.ViewModels.SettingsViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:PaymentAppTester.ViewModels.SettingsViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:PaymentAppTester.ViewModels.SettingsViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:PaymentAppTester.ViewModels.SettingsViewModel.Save"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ApiBaseUrl">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ApiBaseUrl" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PaymentArtifact">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PaymentArtifact" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Token">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Token" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ErrorMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ErrorMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ServiceName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ServiceName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MethodsText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MethodsText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateFrom">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateFrom" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateTo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateTo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBillReady">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBillReady" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalPrice">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalPrice" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPaid">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPaid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ResultText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ResultText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ApiUrl">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ApiUrl" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StatusMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StatusMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StatusColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StatusColor" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ApiBaseUrl">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ApiBaseUrl" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PaymentArtifact">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PaymentArtifact" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Token">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Token" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ErrorMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ErrorMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ServiceName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ServiceName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MethodsText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MethodsText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateFrom">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateFrom" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateTo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateTo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBillReady">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBillReady" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalPrice">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalPrice" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPaid">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPaid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ResultText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ResultText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ApiUrl">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ApiUrl" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StatusMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StatusMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StatusColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StatusColor" generated properties.</summary>
+        </member>
+    </members>
+</doc>

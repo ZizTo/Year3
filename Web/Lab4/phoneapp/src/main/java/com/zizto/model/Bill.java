@@ -18,7 +18,7 @@ public class Bill {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne(fetch = FetchType.LAZY) // LAZy - load when need 
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "subscriber_id")
     private Subscriber subscriber;
 

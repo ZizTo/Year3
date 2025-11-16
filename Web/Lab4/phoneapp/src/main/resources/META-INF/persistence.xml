@@ -1,11 +1,11 @@
-<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.1"
+             xmlns="https://jakarta.ee/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
-             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
-             version="2.2">
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd">
 
     <persistence-unit name="phone-station-pu" transaction-type="RESOURCE_LOCAL">
-        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <class>com.zizto.model.Subscriber</class>
         <class>com.zizto.model.Service</class>
@@ -13,16 +13,16 @@
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-
             <property name="jakarta.persistence.jdbc.url" value="jdbc:sqlserver://DESKTOP-TC60A93;instanceName=SQLEXPRESS;databaseName=PhoneStationDB;encrypt=true;trustServerCertificate=true;"/>
-
             <property name="jakarta.persistence.jdbc.user" value="lab1u"/>
             <property name="jakarta.persistence.jdbc.password" value="lab1uPass"/>
-
-            <property name="eclipselink.target-database" value="SQLServer"/>
-
-            <property name="eclipselink.logging.level.sql" value="FINE"/>
-            <property name="eclipselink.logging.parameters" value="true"/>
+            
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+            
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
+
     </persistence-unit>
 </persistence>

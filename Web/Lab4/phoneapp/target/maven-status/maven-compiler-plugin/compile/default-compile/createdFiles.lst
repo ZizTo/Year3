@@ -1,11 +1,14 @@
+com\zizto\model\Subscriber_.class
 com\zizto\util\JdbcConnector.class
 com\zizto\dao\SubscriberDao.class
 com\zizto\Main.class
+com\zizto\model\Service_.class
 com\zizto\dao\ServiceDao.class
 com\zizto\model\Subscriber.class
 com\zizto\util\JpaUtil.class
 com\zizto\dao\BillDao.class
 com\zizto\model\Bill.class
+com\zizto\model\Bill_.class
 com\zizto\model\Service.class
 com\zizto\util\ConnectionPool.class
 com\zizto\exception\DAOException.class

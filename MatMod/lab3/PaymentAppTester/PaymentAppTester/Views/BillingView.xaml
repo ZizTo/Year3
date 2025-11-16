@@ -1,0 +1,40 @@
+﻿<!-- Views/BillingView.xaml -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaymentAppTester.Views.BillingView"
+             xmlns:vm="clr-namespace:PaymentAppTester.ViewModels"
+             x:DataType="vm:BillingViewModel"
+             Title="Биллинг">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+
+            <!-- Секция 1: Выставление счета -->
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Шаг 1: Выставить счет" FontSize="Title" />
+                    <Entry Placeholder="Имя сервиса" Text="{Binding ServiceName}" />
+                    <Entry Placeholder="Методы (через запятую)" Text="{Binding MethodsText}" />
+                    <Label Text="Период оплаты C:" />
+                    <DatePicker Date="{Binding DateFrom}" />
+                    <Label Text="Период оплаты ПО:" />
+                    <DatePicker Date="{Binding DateTo}" />
+                    <Button Text="Получить счет" Command="{Binding GetBillCommand}" IsEnabled="{Binding IsNotBusy}" />
+                    <Label Text="{Binding TotalPrice, StringFormat='Сумма к оплате: {0:C}'}" IsVisible="{Binding IsBillReady}" />
+                    <Label Text="{Binding PaymentArtifact, StringFormat='Артефакт: {0}'}" IsVisible="{Binding IsBillReady}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Секция 2: Оплата -->
+            <Frame Padding="15" IsVisible="{Binding IsBillReady}">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Шаг 2: Оплатить" FontSize="Title" />
+                    <Button Text="Оплатить" Command="{Binding PayCommand}" IsEnabled="{Binding IsNotBusy}" />
+                    <Label Text="{Binding Token, StringFormat='Полученный токен: {0}'}" IsVisible="{Binding IsPaid}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Text="{Binding ErrorMessage}" TextColor="Red" Margin="0,10,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

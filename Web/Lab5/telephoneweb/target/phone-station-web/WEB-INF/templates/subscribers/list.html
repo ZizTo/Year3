@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head('Список абонентов')}"></head>
+<body>
+    <header th:replace="~{fragments/header :: header-nav}"></header>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>👥 Список абонентов</h2>
+        </section>
+
+        <div th:if="${#lists.isEmpty(subscribers)}" class="alert alert-info">
+            <p>Список абонентов пуст. Данные не найдены в базе данных.</p>
+        </div>
+        
+        <table class="data-table" th:unless="${#lists.isEmpty(subscribers)}">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ФИО</th>
+                    <th>Номер телефона</th>
+                    <th>Статус</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="subscriber : ${subscribers}">
+                    <td th:text="${subscriber.id}">1</td>
+                    <td th:text="${subscriber.fullName}">Иванов Иван Иванович</td>
+                    <td th:text="${subscriber.phoneNumber}">+7 (999) 123-45-67</td>
+                    <td>
+                        <span th:if="${subscriber.isBlocked}" class="status-blocked">Заблокирован</span>
+                        <span th:unless="${subscriber.isBlocked}" class="status-active">Активен</span>
+                    </td>
+                    <td>
+                        <a th:href="@{/app/subscribers/details(id=${subscriber.id})}" class="btn btn-primary">Детали</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer th:replace="~{fragments/footer :: footer-content}"></footer>
+</body>
+</html>

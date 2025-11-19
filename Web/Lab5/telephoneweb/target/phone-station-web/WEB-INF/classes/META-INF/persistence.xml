@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.1"
+             xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd">
+
+    <persistence-unit name="phone-station-web-pu" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Явно перечисляем все наши Entity-классы -->
+        <class>com.zizto.model.Subscriber</class>
+        <class>com.zizto.model.Service</class>
+        <class>com.zizto.model.Bill</class>
+
+        <properties>
+            <!-- Настройки подключения к вашей БД MS SQL Server -->
+            <property name="jakarta.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:sqlserver://DESKTOP-TC60A93;instanceName=SQLEXPRESS;databaseName=PhoneStationDB;encrypt=true;trustServerCertificate=true;"/>
+            <property name="jakarta.persistence.jdbc.user" value="lab1u"/>
+            <property name="jakarta.persistence.jdbc.password" value="lab1uPass"/>
+            
+            <!-- Диалект Hibernate для MS SQL Server -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+            
+            <!-- Настройки для отладки: показывать и форматировать SQL -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            
+            <!-- Стратегия обновления схемы БД. 'update' подходит для разработки -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>

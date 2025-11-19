@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <footer th:fragment="footer-content">
+        <div class="container">
+            <div class="user-info">
+                Вы посетили сайт <strong th:text="${visitCount}">1</strong> раз(а).
+                Последнее посещение: <strong th:text="${lastVisit}">время</strong>.
+            </div>
+            <p>&copy; <span th:text="${#dates.year(#dates.createNow())}">2025</span>. Лабораторная работа №5.</p>
+        </div>
+    </footer>
+</body>
+</html>

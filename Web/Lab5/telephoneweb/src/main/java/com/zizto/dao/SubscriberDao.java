@@ -5,7 +5,6 @@ import com.zizto.model.Subscriber_;
 import com.zizto.util.JpaUtil;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.NoResultException;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
@@ -18,10 +17,6 @@ import java.util.List;
 public class SubscriberDao {
     private static final Logger LOGGER = LoggerFactory.getLogger(SubscriberDao.class);
 
-    /**
-     * Возвращает список всех абонентов.
-     * @return список абонентов или пустой список в случае ошибки.
-     */
     public List<Subscriber> findAll() {
         LOGGER.debug("Запрос на получение всех абонентов");
         try (EntityManager em = JpaUtil.getEntityManager()) {
@@ -32,15 +27,10 @@ public class SubscriberDao {
             return em.createQuery(query).getResultList();
         } catch (Exception e) {
             LOGGER.error("Ошибка при получении списка абонентов", e);
-            return Collections.emptyList(); // Возвращаем пустой список, чтобы не ломать UI
+            return Collections.emptyList();
         }
     }
 
-    /**
-     * Находит абонента по его ID.
-     * @param id ID абонента.
-     * @return объект Subscriber или null, если не найден.
-     */
     public Subscriber findById(int id) {
         LOGGER.debug("Поиск абонента по ID: {}", id);
         try (EntityManager em = JpaUtil.getEntityManager()) {
@@ -50,11 +40,7 @@ public class SubscriberDao {
             throw new DaoException("Ошибка при поиске абонента по ID: " + id, e);
         }
     }
-    
-    /**
-     * Блокирует абонента по его ID.
-     * @param subscriberId ID абонента для блокировки.
-     */
+
     public void blockSubscriber(int subscriberId) {
         LOGGER.debug("Попытка заблокировать абонента с ID: {}", subscriberId);
         EntityManager em = JpaUtil.getEntityManager();
@@ -66,7 +52,7 @@ public class SubscriberDao {
             if (subscriber != null) {
                 if (!subscriber.isBlocked()) {
                     subscriber.setBlocked(true);
-                    em.merge(subscriber); // Обновляем сущность
+                    em.merge(subscriber); 
                     LOGGER.info("Абонент с ID {} успешно заблокирован.", subscriberId);
                 } else {
                     LOGGER.warn("Попытка заблокировать уже заблокированного абонента с ID {}.", subscriberId);

@@ -17,11 +17,6 @@ import org.slf4j.LoggerFactory;
 public class BillDao {
     private static final Logger LOGGER = LoggerFactory.getLogger(BillDao.class);
 
-    /**
-     * Находит один неоплаченный счет для заданного абонента.
-     * @param subscriberId ID абонента.
-     * @return объект Bill или null, если неоплаченных счетов нет.
-     */
     public Bill getUnpaidBillBySubscriberId(int subscriberId) {
         LOGGER.debug("Поиск неоплаченного счета для абонента ID: {}", subscriberId);
         try (EntityManager em = JpaUtil.getEntityManager()) {
@@ -44,10 +39,7 @@ public class BillDao {
         }
     }
 
-    /**
-     * Отмечает счет как оплаченный.
-     * @param billId ID счета для оплаты.
-     */
+    
     public void payBill(int billId) {
         LOGGER.debug("Попытка оплаты счета с ID: {}", billId);
         EntityManager em = JpaUtil.getEntityManager();

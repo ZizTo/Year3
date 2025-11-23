@@ -6,17 +6,15 @@
 
     <main class="container">
         <section class="page-header">
-            <h2 th:text="'👤 Абонент: ' + ${subscriber.fullName}">Детали абонента</h2>
+            <h2 th:text="'Абонент: ' + ${subscriber.fullName}">Детали абонента</h2>
             <a th:href="@{/app/subscribers/list}" class="btn">Назад к списку</a>
         </section>
         
-        <!-- Сообщение об ошибке, если абонент не найден -->
         <div th:if="${error}" class="alert alert-error">
             <strong th:text="${error}">Ошибка!</strong>
         </div>
 
         <div th:unless="${error}" class="details-grid">
-            <!-- Информация об абоненте -->
             <div class="card">
                 <h3>Основная информация</h3>
                 <p><strong>ID:</strong> <span th:text="${subscriber.id}">1</span></p>
@@ -32,7 +30,6 @@
                 </form>
             </div>
 
-            <!-- Подключенные услуги -->
             <div class="card">
                 <h3>Подключенные услуги</h3>
                 <div th:if="${#lists.isEmpty(services)}" class="alert alert-info">
@@ -43,7 +40,6 @@
                 </ul>
             </div>
 
-            <!-- Неоплаченный счет -->
             <div class="card">
                 <h3>Неоплаченный счет</h3>
                 <div th:if="${unpaidBill == null}" class="alert alert-success">

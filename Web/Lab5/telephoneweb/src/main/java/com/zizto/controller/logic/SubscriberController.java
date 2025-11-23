@@ -14,27 +14,18 @@ import org.thymeleaf.context.WebContext;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Логический контроллер для управления операциями, связанными с абонентами.
- * Выполняет запросы к DAO и подготавливает данные для отображения в шаблонах.
- */
+
 public class SubscriberController {
 
     private final SubscriberDao subscriberDao = new SubscriberDao();
     private final ServiceDao serviceDao = new ServiceDao();
     private final BillDao billDao = new BillDao();
 
-    /**
-     * Отображает список всех абонентов.
-     */
     public void listSubscribers(WebContext context) {
         context.setVariable("subscribers", subscriberDao.findAll());
         context.setVariable("pageTitle", "Список абонентов");
     }
 
-    /**
-     * Отображает детальную информацию об одном абоненте, его услугах и неоплаченном счете.
-     */
     public void showSubscriberDetails(HttpServletRequest request, WebContext context) {
         try {
             int subscriberId = Integer.parseInt(request.getParameter("id"));
@@ -59,30 +50,23 @@ public class SubscriberController {
             context.setVariable("error", "Ошибка при получении данных: " + e.getMessage());
         }
     }
-    
-    /**
-     * Обрабатывает POST-запрос на блокировку абонента.
-     */
+
     public void blockSubscriber(HttpServletRequest request, HttpServletResponse response) throws IOException, DaoException {
         try {
             int subscriberId = Integer.parseInt(request.getParameter("subscriberId"));
             subscriberDao.blockSubscriber(subscriberId);
-            // После успешной блокировки перенаправляем обратно на страницу деталей
             response.sendRedirect(request.getContextPath() + "/app/subscribers/details?id=" + subscriberId);
         } catch (NumberFormatException e) {
             throw new DaoException("Некорректный ID абонента для блокировки.", e);
         }
     }
     
-    /**
-     * Обрабатывает POST-запрос на оплату счета.
-     */
+
     public void payBill(HttpServletRequest request, HttpServletResponse response) throws IOException, DaoException {
         try {
             int billId = Integer.parseInt(request.getParameter("billId"));
             int subscriberId = Integer.parseInt(request.getParameter("subscriberId"));
             billDao.payBill(billId);
-            // После успешной оплаты перенаправляем обратно на страницу деталей
             response.sendRedirect(request.getContextPath() + "/app/subscribers/details?id=" + subscriberId);
         } catch (NumberFormatException e) {
             throw new DaoException("Некорректный ID счета или абонента для оплаты.", e);

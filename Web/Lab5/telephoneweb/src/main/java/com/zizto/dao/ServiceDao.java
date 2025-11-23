@@ -18,10 +18,7 @@ import java.util.List;
 public class ServiceDao {
     private static final Logger LOGGER = LoggerFactory.getLogger(ServiceDao.class);
 
-    /**
-     * Возвращает список всех доступных услуг.
-     * @return список всех услуг.
-     */
+
     public List<Service> getAllServices() {
         LOGGER.debug("Запрос на получение всех услуг");
         try (EntityManager em = JpaUtil.getEntityManager()) {
@@ -32,11 +29,6 @@ public class ServiceDao {
         }
     }
 
-    /**
-     * Возвращает список услуг, подключенных у конкретного абонента.
-     * @param subscriberId ID абонента.
-     * @return список услуг абонента.
-     */
     public List<Service> getServicesBySubscriberId(int subscriberId) {
         LOGGER.debug("Запрос на получение услуг для абонента ID: {}", subscriberId);
         try (EntityManager em = JpaUtil.getEntityManager()) {

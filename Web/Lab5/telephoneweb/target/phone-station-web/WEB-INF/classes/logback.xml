@@ -5,9 +5,7 @@
         </encoder>
     </appender>
 
-    <!-- Устанавливаем уровень логирования для Hibernate на ERROR, чтобы не засорять консоль -->
     <logger name="org.hibernate" level="ERROR" />
-    <!-- Уровень DEBUG для наших пакетов, чтобы видеть подробную информацию -->
     <logger name="com.zizto" level="DEBUG" />
 
     <root level="INFO">

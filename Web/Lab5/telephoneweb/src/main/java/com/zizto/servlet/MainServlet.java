@@ -21,14 +21,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
-/**
- * Главный сервлет-диспетчер приложения "Телефонная Станция".
- *
- * - Часть 1: Принимает все HTTP-запросы на /app/* и передает управление контроллерам
- *   через ControllerMappings.
- * - Часть 2: Управляет сессиями и cookies для каждого пользователя.
- * - Часть 2: Централизованно обрабатывает все исключения, перенаправляя на страницу error.html.
- */
+
 public class MainServlet extends HttpServlet {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MainServlet.class);
@@ -38,7 +31,6 @@ public class MainServlet extends HttpServlet {
     public void init() throws ServletException {
         LOGGER.info("Инициализация MainServlet...");
 
-        // Инициализация Thymeleaf
         JakartaServletWebApplication application = JakartaServletWebApplication.buildApplication(getServletContext());
         WebApplicationTemplateResolver templateResolver = new WebApplicationTemplateResolver(application);
 
@@ -46,13 +38,12 @@ public class MainServlet extends HttpServlet {
         templateResolver.setPrefix("/WEB-INF/templates/");
         templateResolver.setSuffix(".html");
         templateResolver.setCharacterEncoding("UTF-8");
-        // Отключаем кэширование для удобства разработки
         templateResolver.setCacheable(false);
 
         this.templateEngine = new TemplateEngine();
         this.templateEngine.setTemplateResolver(templateResolver);
 
-        LOGGER.info("MainServlet успешно инициализирован.");
+        LOGGER.info("MainServlet инициализирован.");
     }
 
     @Override
@@ -66,22 +57,17 @@ public class MainServlet extends HttpServlet {
     }
 
     private void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        // Создаем WebExchange и WebContext для Thymeleaf
         IWebExchange webExchange = JakartaServletWebApplication.buildApplication(getServletContext()).buildExchange(request, response);
         WebContext context = new WebContext(webExchange, request.getLocale());
 
         try {
-            // Обработка сессии и cookies
             handleSessionAndCookies(request, response, context);
 
-            // Находим нужный контроллер по URL и методу запроса
             IController controller = ControllerMappings.resolve(request);
 
             if (controller != null) {
-                // Выполняем логику контроллера
                 controller.process(request, response, context);
 
-                // Если это GET-запрос и не было редиректа, отображаем шаблон
                 if (request.getMethod().equalsIgnoreCase("GET") && !response.isCommitted()) {
                     String templateName = resolveTemplateName(request.getPathInfo());
                     renderTemplate(templateName, context, response);
@@ -96,18 +82,13 @@ public class MainServlet extends HttpServlet {
         }
     }
 
-    /**
-     * Обрабатывает сессию и cookies в соответствии с требованиями лабораторной работы.
-     */
     private void handleSessionAndCookies(HttpServletRequest request, HttpServletResponse response, WebContext context) {
         HttpSession session = request.getSession(true);
 
-        // Счётчик посещений (в сессии)
         Integer visitCount = (Integer) session.getAttribute("visitCount");
         visitCount = (visitCount == null) ? 1 : visitCount + 1;
         session.setAttribute("visitCount", visitCount);
 
-        // Дата/время последнего визита (в cookie)
         String lastVisitTime = "первый раз";
         if (request.getCookies() != null) {
             lastVisitTime = Arrays.stream(request.getCookies())
@@ -117,42 +98,31 @@ public class MainServlet extends HttpServlet {
                 .orElse(lastVisitTime);
         }
         
-        // Устанавливаем новый cookie с текущим временем
+        
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH:mm:ss");
         String currentVisitTime = LocalDateTime.now().format(formatter);
         Cookie lastVisitCookie = new Cookie("lastVisit", currentVisitTime);
-        lastVisitCookie.setMaxAge(60 * 60 * 24 * 365); // 1 год
+        lastVisitCookie.setMaxAge(60 * 60 * 24 * 365);
         lastVisitCookie.setPath(request.getContextPath());
         response.addCookie(lastVisitCookie);
 
-        // Передаем данные в Thymeleaf
         context.setVariable("visitCount", visitCount);
         context.setVariable("lastVisit", lastVisitTime.replace("_", " "));
     }
 
-    /**
-     * Определяет имя шаблона на основе пути запроса.
-     */
     private String resolveTemplateName(String pathInfo) {
         if (pathInfo == null || pathInfo.equals("/") || pathInfo.equals("/index")) {
             return "subscribers/list";
         }
-        // Убираем начальный слэш, чтобы получить путь вида "subscribers/list"
         return pathInfo.substring(1);
     }
 
-    /**
-     * Отображает указанный Thymeleaf шаблон.
-     */
     private void renderTemplate(String templateName, WebContext context, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         templateEngine.process(templateName, context, response.getWriter());
     }
 
-    /**
-     * Централизованно обрабатывает ошибки и отображает страницу error.html.
-     */
     private void handleError(Exception e, WebContext context, HttpServletResponse response) throws IOException {
         context.setVariable("errorTitle", "Произошла ошибка");
         context.setVariable("errorMessage", e.getMessage());

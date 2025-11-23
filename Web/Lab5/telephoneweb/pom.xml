@@ -18,14 +18,12 @@
     </properties>
 
     <dependencies>
-        <!-- Thymeleaf - для создания динамических HTML страниц -->
         <dependency>
             <groupId>org.thymeleaf</groupId>
             <artifactId>thymeleaf</artifactId>
             <version>3.1.2.RELEASE</version>
         </dependency>
 
-        <!-- Jakarta EE Web API - для сервлетов, сессий и т.д. -->
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-web-api</artifactId>
@@ -33,14 +31,12 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- JPA и Hibernate - для работы с базой данных -->
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>6.4.4.Final</version>
         </dependency>
         
-        <!-- Hibernate JPA Metamodel Generator - для создания классов _ (Subscriber_, Bill_ и т.д.) -->
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-jpamodelgen</artifactId>
@@ -48,14 +44,12 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- MS SQL Server JDBC Driver -->
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
             <version>12.6.1.jre11</version>
         </dependency>
 
-        <!-- Логирование SLF4J и Logback -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -71,7 +65,6 @@
     <build>
         <finalName>phone-station-web</finalName>
         <plugins>
-            <!-- Плагин для компиляции -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -79,7 +72,6 @@
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
-                    <!-- Включаем annotation processing для генерации метамоделей -->
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.hibernate.orm</groupId>
@@ -90,14 +82,12 @@
                 </configuration>
             </plugin>
             
-            <!-- Плагин для сборки WAR-архива -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
             </plugin>
 
-            <!-- Jetty Maven Plugin - для запуска веб-приложения -->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>

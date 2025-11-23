@@ -27,7 +27,6 @@ public class Bill {
 
     public Bill() {}
 
-    // Getters and Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public Subscriber getSubscriber() { return subscriber; }

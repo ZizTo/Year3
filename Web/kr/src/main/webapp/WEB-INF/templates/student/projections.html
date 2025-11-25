@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student Names and Dates</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/gtvg.css}" />
+</head>
+<body>
+    <h1>Student Last Names and Start Dates</h1>
+    <table border="1">
+        <tr>
+            <th>Last Name</th>
+            <th>Start Date</th>
+        </tr>
+        <!-- row является массивом Object[], где row[0] - lastName, row[1] - date -->
+        <tr th:each="row : ${projections}">
+            <td th:text="${row[0]}">Sidorov</td>
+            <td th:text="${#dates.format(row[1], 'dd-MM-yyyy')}">01-01-2025</td>
+        </tr>
+    </table>
+    <p><a href="../../index.html" th:href="@{/}">Return to home</a></p>
+</body>
+</html>

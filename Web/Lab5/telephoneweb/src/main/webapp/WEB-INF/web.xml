@@ -6,20 +6,17 @@
 
     <display-name>Phone Station Web Application</display-name>
     
-    <!-- Основной сервлет-диспетчер нашего приложения -->
     <servlet>
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>com.zizto.servlet.MainServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     
-    <!-- Все запросы, начинающиеся с /app/, будут направляться в MainServlet -->
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>
         <url-pattern>/app/*</url-pattern>
     </servlet-mapping>
 
-    <!-- Стартовая страница, если пользователь заходит в корень -->
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>

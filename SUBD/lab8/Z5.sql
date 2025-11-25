@@ -1,0 +1,1 @@
+Alter server role DBaLogManager add member Login4

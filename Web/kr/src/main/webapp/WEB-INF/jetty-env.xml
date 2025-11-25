@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+ <Configure >
+	 <New id="DSTest" class="org.eclipse.jetty.plus.jndi.Resource">	
+  	<!--  <New id="DSTest" class="org.eclipse.jetty.plus.jndi.Resource"> -->
+  <!--   <New id="DSTest" class="org.eclipse.jetty.plus.jndi.NamingEntry"> -->
+     <Arg>jdbc/DSTest</Arg>
+     <Arg>
+        <New class="com.mysql.cj.jdbc.MysqlDataSource">
+           <Set name="Url">jdbc:mysql://localhost:3306/university7?characterEncoding=utf8&amp;serverTimezone=UTC</Set>
+           <Set name="User">root</Set>
+           <Set name="Password">11111</Set>
+           <Set name="DatabaseName">university7?sslmode=require</Set>
+           <Set name="ServerName">localhost</Set>
+           <Set name="PortNumber">3306</Set>
+        </New>
+     </Arg>
+  </New>
+  </Configure>

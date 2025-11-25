@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Faculty Center</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+  </head>
+
+  <body>
+
+    <h1>Course list</h1>
+  
+    <table>
+      <tr>
+        <th>Lector</th>
+        <th>Title</th> 
+        <th>Total students </th>
+        <th>Details</th>
+      </tr>
+      <tr th:each="c : ${courses}" >
+		 <td th:text="${c.lector}">Math</td> 
+        
+        <td th:text="${c.name}">Vitali Surkov</td>
+        
+        <td th:text="${#lists.size(c.students)}">22</td>
+        <td>
+          <a href="details.html" th:href="@{/course/details(courseId=${c.id})}">view</a>
+        </td>
+      </tr>
+    </table>
+
+  
+    <p>
+      <a href="../home.html" th:href="@{/}">Return to home</a>
+    </p>
+    
+  </body>
+  
+</html>
+

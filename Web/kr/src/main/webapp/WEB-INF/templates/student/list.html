@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${pageTitle}">Students List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/gtvg.css}" />
+</head>
+<body>
+    <h1 th:text="${pageTitle}">List of Students</h1>
+
+    <table border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Start Date</th>
+            <th>City</th>
+        </tr>
+        <tr th:each="s : ${students}">
+            <td th:text="${s.firstName}">Name</td>
+            <td th:text="${s.lastName}">Surname</td>
+            <td th:text="${#dates.format(s.startDate, 'dd-MM-yyyy')}">Date</td>
+            <td th:text="${s.address != null} ? ${s.address.city} : 'No Info'">City</td>
+        </tr>
+    </table>
+
+    <p><a href="../../index.html" th:href="@{/}">Return to home</a></p>
+</body>
+</html>

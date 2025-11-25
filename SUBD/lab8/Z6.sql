@@ -1,0 +1,1 @@
+alter server role dbcreator drop member Login3

@@ -1,5 +1,4 @@
-﻿// ViewModels/SettingsViewModel.cs
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using PaymentAppTester.Services;
 using Microsoft.Maui.Graphics;
@@ -24,7 +23,6 @@ namespace PaymentAppTester.ViewModels
         {
             _apiService = apiService;
             _appState = appState;
-            // Загружаем сохраненный URL при запуске
             ApiUrl = _appState.ApiBaseUrl ?? "http://10.0.2.2:5000";
         }
 
@@ -41,7 +39,7 @@ namespace PaymentAppTester.ViewModels
             try
             {
                 _apiService.SetBaseUrl(ApiUrl);
-                _appState.ApiBaseUrl = ApiUrl; // Сохраняем в общем состоянии
+                _appState.ApiBaseUrl = ApiUrl;
                 StatusColor = Colors.Green;
                 StatusMessage = "Адрес сохранен успешно!";
             }

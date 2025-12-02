@@ -1,5 +1,4 @@
-﻿// Models/PaymentInfoRequest.cs
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 public class PaymentInfoRequest
 {

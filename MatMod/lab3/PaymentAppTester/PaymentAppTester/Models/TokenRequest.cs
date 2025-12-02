@@ -1,5 +1,4 @@
-﻿// Models/TokenRequest.cs
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 public class TokenRequest
 {

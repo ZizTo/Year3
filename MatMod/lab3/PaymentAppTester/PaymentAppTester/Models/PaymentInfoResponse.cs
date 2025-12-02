@@ -1,5 +1,4 @@
-﻿// Models/PaymentInfoResponse.cs
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 public class PaymentInfoResponse

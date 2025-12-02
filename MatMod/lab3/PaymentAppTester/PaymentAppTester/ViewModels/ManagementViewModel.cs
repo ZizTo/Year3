@@ -1,5 +1,4 @@
-﻿// ViewModels/ManagementViewModel.cs
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using PaymentAppTester.Services;
 using System;
@@ -62,12 +61,11 @@ namespace PaymentAppTester.ViewModels
             {
                 var request = new TokenRequest { PaymentArtifact = AppState.PaymentArtifact };
                 var response = await _apiService.ResetTokenAsync(request);
-                AppState.Token = response.Token; // Обновляем токен в общем состоянии
+                AppState.Token = response.Token;
                 ResultText = $"Новый токен получен: {response.Token}";
             });
         }
 
-        // Вспомогательный метод для уменьшения дублирования кода
         private async Task ExecuteApiCall(Func<Task> apiAction)
         {
             IsBusy = true;

@@ -1,9 +1,7 @@
-﻿// Services/AppStateService.cs
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace PaymentAppTester.Services
 {
-    // Partial class для генерации кода CommunityToolkit.Mvvm
     public partial class AppStateService : ObservableObject
     {
         [ObservableProperty]

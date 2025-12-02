@@ -1,5 +1,4 @@
-﻿// Views/ManagementView.xaml.cs
-using PaymentAppTester.ViewModels;
+﻿using PaymentAppTester.ViewModels;
 
 namespace PaymentAppTester.Views;
 

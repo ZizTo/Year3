@@ -1,5 +1,4 @@
-﻿// ViewModels/BillingViewModel.cs
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using PaymentAppTester.Services;
 using System;
@@ -23,18 +22,15 @@ namespace PaymentAppTester.ViewModels
         [ObservableProperty]
         private string _errorMessage;
 
-        // --- Свойства для выставления счета ---
         [ObservableProperty] private string _serviceName = "Online marketplace";
         [ObservableProperty] private string _methodsText = "getInfo,getPrice";
         [ObservableProperty] private DateTime _dateFrom = DateTime.Today;
         [ObservableProperty] private DateTime _dateTo = DateTime.Today.AddDays(12);
 
-        // --- Свойства для результата счета ---
         [ObservableProperty][NotifyPropertyChangedFor(nameof(IsBillReady))] private string _paymentArtifact;
         [ObservableProperty] private decimal _totalPrice;
         public bool IsBillReady => !string.IsNullOrEmpty(PaymentArtifact);
 
-        // --- Свойства для результата оплаты ---
         [ObservableProperty][NotifyPropertyChangedFor(nameof(IsPaid))] private string _token;
         public bool IsPaid => !string.IsNullOrEmpty(Token);
 
@@ -49,7 +45,7 @@ namespace PaymentAppTester.ViewModels
         {
             IsBusy = true;
             ErrorMessage = string.Empty;
-            PaymentArtifact = null; // Сбрасываем предыдущий результат
+            PaymentArtifact = null;
             Token = null;
 
             try
@@ -66,7 +62,7 @@ namespace PaymentAppTester.ViewModels
 
                 PaymentArtifact = response.PaymentArtifact;
                 TotalPrice = response.TotalPrice;
-                _appState.PaymentArtifact = response.PaymentArtifact; // Сохраняем в общем состоянии
+                _appState.PaymentArtifact = response.PaymentArtifact;
             }
             catch (ApiException ex) { ErrorMessage = ex.Message; }
             catch (Exception ex) { ErrorMessage = $"Критическая ошибка: {ex.Message}"; }
@@ -91,7 +87,7 @@ namespace PaymentAppTester.ViewModels
                 var request = new PayRequest { PaymentArtifact = this.PaymentArtifact };
                 var response = await _apiService.PayAsync(request);
                 Token = response.Token;
-                _appState.Token = response.Token; // Сохраняем в общем состоянии
+                _appState.Token = response.Token;
             }
             catch (ApiException ex) { ErrorMessage = ex.Message; }
             catch (Exception ex) { ErrorMessage = $"Критическая ошибка: {ex.Message}"; }

@@ -1,5 +1,4 @@
-﻿// MauiProgram.cs
-using PaymentAppTester.Services;
+﻿using PaymentAppTester.Services;
 using PaymentAppTester.ViewModels;
 using PaymentAppTester.Views;
 
@@ -18,13 +17,9 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
-        // --- РЕГИСТРАЦИЯ ЗАВИСИМОСТЕЙ ---
-
-        // Сервисы регистрируем как Singleton (один экземпляр на все приложение)
         builder.Services.AddSingleton<IApiService, PaymentApiService>();
         builder.Services.AddSingleton<AppStateService>();
 
-        // ViewModels и Views регистрируем как Transient (новый экземпляр при каждом запросе)
         builder.Services.AddTransient<SettingsViewModel>();
         builder.Services.AddTransient<SettingsView>();
 

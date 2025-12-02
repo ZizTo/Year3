@@ -1,5 +1,4 @@
-﻿<!-- Views/BillingView.xaml -->
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PaymentAppTester.Views.BillingView"
              xmlns:vm="clr-namespace:PaymentAppTester.ViewModels"
@@ -9,7 +8,6 @@
         <VerticalStackLayout Spacing="10" Padding="20">
             <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
 
-            <!-- Секция 1: Выставление счета -->
             <Frame Padding="15">
                 <VerticalStackLayout Spacing="10">
                     <Label Text="Шаг 1: Выставить счет" FontSize="Title" />
@@ -25,7 +23,6 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <!-- Секция 2: Оплата -->
             <Frame Padding="15" IsVisible="{Binding IsBillReady}">
                 <VerticalStackLayout Spacing="10">
                     <Label Text="Шаг 2: Оплатить" FontSize="Title" />

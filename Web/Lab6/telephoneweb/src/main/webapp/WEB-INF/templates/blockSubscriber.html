@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Block Subscriber</title>
+</head>
+<body>
+    <h2 style="color:red">Block Subscriber (Admin Area)</h2>
+    
+    <form action="?action=blockSubscriber" method="post">
+        <label>Enter Subscriber ID to Block:</label>
+        <input type="number" name="subscriberId" required/>
+        <br/><br/>
+        <button type="submit" style="background-color: red; color: white;">BLOCK USER</button>
+    </form>
+    
+    <br/>
+    <a href="?action=home">Cancel</a>
+</body>
+</html>

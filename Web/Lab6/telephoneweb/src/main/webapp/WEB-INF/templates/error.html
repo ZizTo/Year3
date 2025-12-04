@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head('Ошибка')}"></head>
+<body>
+    <header th:replace="~{fragments/header :: header-nav}"></header>
+
+    <main class="container">
+        <section class="page-header">
+            <h2 th:text="${errorTitle} ?: '🚫 Произошла критическая ошибка'">Ошибка</h2>
+        </section>
+
+        <div class="alert alert-error">
+            <p><strong>Тип ошибки:</strong> <span th:text="${errorType} ?: 'Unknown'">Exception</span></p>
+            <p><strong>Сообщение:</strong> <span th:text="${errorMessage} ?: 'На сервере произошла непредвиденная ошибка.'">Error details</span></p>
+        </div>
+
+        <a th:href="@{/app/index}" class="btn">Вернуться на главную</a>
+    </main>
+
+    <footer th:replace="~{fragments/footer :: footer-content}"></footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Result</title>
+</head>
+<body>
+    <h2>Search Result</h2>
+    
+    <div th:if="${bill != null}">
+        <p>Found Bill ID: <b th:text="${bill.id}"></b></p>
+        <p>Amount: <b th:text="${bill.amount}"></b></p>
+        <p>Date: <b th:text="${bill.issueDate}"></b></p>
+        
+        <!-- Кнопка оплаты (только если не оплачен) -->
+        <form action="?action=payBill" method="post" th:if="${!bill.paid}">
+            <input type="hidden" name="billId" th:value="${bill.id}"/>
+            <button type="submit">Pay Bill</button>
+        </form>
+    </div>
+    
+    <div th:if="${bill == null}">
+        <p style="color:red">No unpaid bills found for subscriber ID: <span th:text="${subscriberId}"></span></p>
+    </div>
+    
+    <br/>
+    <a href="?action=home">Back to Home</a>
+</body>
+</html>

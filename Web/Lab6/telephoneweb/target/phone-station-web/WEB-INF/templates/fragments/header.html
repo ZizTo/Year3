@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <title th:text="${title} + ' - Телефонная Станция'">Телефонная Станция</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+    <header th:fragment="header-nav">
+        <div class="container">
+            <h1><a th:href="@{/app/subscribers/list}">Телефонная Станция</a></h1>
+            <nav>
+                <a th:href="@{/app/subscribers/list}">Абоненты</a>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head(${pageTitle})}"></head>
+<body>
+    <header th:replace="~{fragments/header :: header-nav}"></header>
+
+    <main class="container">
+        <section class="page-header">
+            <h2 th:text="'Абонент: ' + ${subscriber.fullName}">Детали абонента</h2>
+            <a th:href="@{/app/subscribers/list}" class="btn">Назад к списку</a>
+        </section>
+        
+        <div th:if="${error}" class="alert alert-error">
+            <strong th:text="${error}">Ошибка!</strong>
+        </div>
+
+        <div th:unless="${error}" class="details-grid">
+            <div class="card">
+                <h3>Основная информация</h3>
+                <p><strong>ID:</strong> <span th:text="${subscriber.id}">1</span></p>
+                <p><strong>ФИО:</strong> <span th:text="${subscriber.fullName}">Иванов И.И.</span></p>
+                <p><strong>Телефон:</strong> <span th:text="${subscriber.phoneNumber}">+7 (999) ...</span></p>
+                <p><strong>Статус:</strong>
+                    <span th:if="${subscriber.isBlocked}" class="status-blocked">Заблокирован</span>
+                    <span th:unless="${subscriber.isBlocked}" class="status-active">Активен</span>
+                </p>
+                <form th:action="@{/app/subscribers/block}" method="post" th:unless="${subscriber.isBlocked}" onsubmit="return confirm('Вы уверены, что хотите заблокировать этого абонента?');">
+                    <input type="hidden" name="subscriberId" th:value="${subscriber.id}" />
+                    <button type="submit" class="btn btn-danger">Заблокировать</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>Подключенные услуги</h3>
+                <div th:if="${#lists.isEmpty(services)}" class="alert alert-info">
+                    Нет подключенных услуг.
+                </div>
+                <ul th:unless="${#lists.isEmpty(services)}">
+                    <li th:each="service : ${services}" th:text="${service.name} + ' (' + ${service.monthlyCost} + ' руб/мес)'">Услуга</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Неоплаченный счет</h3>
+                <div th:if="${unpaidBill == null}" class="alert alert-success">
+                    Все счета оплачены.
+                </div>
+                <div th:unless="${unpaidBill == null}">
+                    <p><strong>ID счета:</strong> <span th:text="${unpaidBill.id}">101</span></p>
+                    <p><strong>Сумма:</strong> <span th:text="${unpaidBill.amount} + ' руб.'">1000</span></p>
+                    <p><strong>Дата выставления:</strong> <span th:text="${#dates.format(unpaidBill.issueDate, 'dd.MM.yyyy')}">01.01.2025</span></p>
+                    <form th:action="@{/app/subscribers/payBill}" method="post">
+                        <input type="hidden" name="billId" th:value="${unpaidBill.id}" />
+                        <input type="hidden" name="subscriberId" th:value="${subscriber.id}" />
+                        <button type="submit" class="btn btn-primary">Оплатить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="~{fragments/footer :: footer-content}"></footer>
+</body>
+</html>

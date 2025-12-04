@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone Station</title>
+</head>
+<body>
+    <h1>Phone Station System</h1>
+    
+    <!-- Приветствие пользователя -->
+    <div th:if="${session.currentUser != null}">
+        <h3>Hello, <span th:text="${session.currentUser.login}">User</span>! 
+            Role: <span th:text="${session.currentUser.role}">USER</span>
+        </h3>
+        <a href="?action=logout">Logout</a>
+    </div>
+
+    <!-- Предложение войти для Гостей -->
+    <div th:unless="${session.currentUser != null}">
+        <h3>Hello, Guest!</h3>
+        <a href="?action=loginPage">Login</a> | <a href="?action=register">Register</a>
+    </div>
+
+    <hr/>
+    <h3>Available Actions:</h3>
+    <ul>
+        <!-- Доступно всем (защищено фильтром, но ссылку покажем всем для примера) -->
+        <li><a href="?action=listServices">View Services (Users & Admins)</a></li>
+        
+        <!-- Доступно всем -->
+        <li><a href="?action=showUnpaidBillForm">Check Bills (Users & Admins)</a></li>
+        
+        <!-- Доступно ТОЛЬКО АДМИНАМ (скрываем ссылку, если не админ) -->
+        <li th:if="${session.currentUser != null and session.currentUser.role.name() == 'ADMIN'}">
+            <a href="?action=blockSubscriberPage" style="color:red">Block Subscriber (ADMIN ONLY)</a>
+        </li>
+    </ul>
+</body>
+</html>

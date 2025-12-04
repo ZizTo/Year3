@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Bill</title>
+</head>
+<body>
+    <h2>Find Unpaid Bill</h2>
+    
+    <form action="?action=getUnpaidBill" method="post">
+        <label>Enter Subscriber ID:</label>
+        <input type="number" name="subscriberId" required/>
+        <button type="submit">Search</button>
+    </form>
+    
+    <br/>
+    <a href="?action=home">Back to Home</a>
+</body>
+</html>

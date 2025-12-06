@@ -173,7 +173,7 @@ public class FrontControllerFilter implements Filter {
                     break;
 
                     
-                // --- СТАРЫЕ КОМАНДЫ ---
+                // --- СТАРЫЕ КОМАНДЫ ---s
                 case "listServices":
                     context.setVariable("services", serviceDao.getAllServices());
                     templateEngine.process("services", context, resp.getWriter());

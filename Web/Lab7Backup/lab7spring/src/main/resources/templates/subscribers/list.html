@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{app.title}">Система управления абонентами</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #007bff; color: white; }
+        .btn { padding: 5px 10px; margin: 5px; text-decoration: none; border-radius: 3px; display: inline-block; }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-danger { background: #dc3545; color: white; }
+        .pagination { margin-top: 20px; }
+        .pagination a, .pagination span { padding: 5px 10px; margin: 5px; }
+        .pagination .active { background: #007bff; color: white; }
+        .lang-switcher { margin-bottom: 20px; }
+        .lang-switcher a { margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <!-- Переключатель языков -->
+    <div class="lang-switcher">
+        <a th:href="@{/subscribers(lang='ru')}">Русский</a>
+        <a th:href="@{/subscribers(lang='en')}">English</a>
+        <a th:href="@{/subscribers(lang='de')}">Deutsch</a>
+    </div>
+
+    <h1 th:text="#{app.subscribers}">Список абонентов</h1>
+    <a th:href="@{/subscribers/new}" class="btn btn-primary" th:text="'+ ' + #{app.add}">+ Добавить абонента</a>
+    <a th:href="@{/}" class="btn btn-primary" th:text="'← ' + #{app.home}">← На главную</a>
+    
+    <table th:if="${!subscribers.isEmpty()}">
+        <tr>
+            <th th:text="#{app.id}">ID</th>
+            <th th:text="#{app.name}">ФИО</th>
+            <th th:text="#{app.phone}">Телефон</th>
+            <th th:text="#{app.status}">Статус</th>
+            <th th:text="#{app.actions}">Действия</th>
+        </tr>
+        <tr th:each="subscriber : ${subscribers}">
+            <td th:text="${subscriber.id}"></td>
+            <td th:text="${subscriber.fullName}"></td>
+            <td th:text="${subscriber.phoneNumber}"></td>
+            <td th:if="${subscriber.blocked}" th:text="#{app.blocked}">блок</td>
+            <td th:if="${!subscriber.blocked}" th:text="#{app.active}">не блок</td>
+            <td>
+                <a th:href="@{/subscribers/edit/{id}(id=${subscriber.id})}" class="btn btn-primary" th:text="#{app.edit}">Редактировать</a>
+                <a th:href="@{/subscribers/delete/{id}(id=${subscriber.id})}" class="btn btn-danger" th:text="#{app.delete}" onclick="return confirm('Удалить?')">Удалить</a>
+            </td>
+        </tr>
+    </table>
+    <p th:if="${subscribers.isEmpty()}" th:text="'Нет абонентов'">Нет абонентов в системе</p>
+
+    <div class="pagination" th:if="${totalPages > 1}">
+        <span th:text="#{pagination.page} + ' ' + ${currentPage + 1} + ' ' + #{pagination.of} + ' ' + ${totalPages}">Страница 1 из 5</span>
+        
+        <a th:if="${currentPage > 0}" th:href="@{/subscribers(page=0)}">« Первая</a>
+        <a th:if="${currentPage > 0}" th:href="@{/subscribers(page=${currentPage - 1})}">← Предыдущая</a>
+        
+        <a th:each="i : ${#numbers.sequence(0, totalPages - 1)}" 
+           th:href="@{/subscribers(page=${i})}"
+           th:class="${i == currentPage ? 'active' : ''}"
+           th:text="${i + 1}">1</a>
+        
+        <a th:if="${currentPage < totalPages - 1}" th:href="@{/subscribers(page=${currentPage + 1})}">Следующая →</a>
+        <a th:if="${currentPage < totalPages - 1}" th:href="@{/subscribers(page=${totalPages - 1})}">Последняя »</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{app.title}">Система управления абонентами</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-group { margin: 15px 0; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input { width: 100%; padding: 8px; box-sizing: border-box; }
+        .btn { padding: 10px 20px; margin: 10px 5px 10px 0; border: none; border-radius: 5px; cursor: pointer; }
+        .btn-primary { background: #28a745; color: white; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .lang-switcher { margin-bottom: 20px; padding: 10px; background: #f0f0f0; border-radius: 5px; }
+        .lang-switcher a { margin-right: 10px; padding: 5px 10px; text-decoration: none; color: #28a745; }
+    </style>
+</head>
+<body>
+    <!-- Переключатель языков -->
+    <div class="lang-switcher">
+        <strong>Язык:</strong>
+        <a th:href="@{/services/new(lang='ru')}">🇷🇺 Русский</a>
+        <a th:href="@{/services/new(lang='en')}">🇬🇧 English</a>
+        <a th:href="@{/services/new(lang='de')}">🇩🇪 Deutsch</a>
+    </div>
+
+    <h1 th:if="${service.id != null and service.id != 0}">Редактирование услуги</h1>
+    <h1 th:if="${service.id == null or service.id == 0}">Добавить услугу</h1>
+    
+    <form th:action="@{/services}" th:object="${service}" method="POST">
+        <input type="hidden" th:field="*{id}" th:if="*{id}">
+        
+        <div class="form-group">
+            <label>Название услуги:</label>
+            <input type="text" th:field="*{name}" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Ежемесячная стоимость (руб):</label>
+            <input type="number" th:field="*{monthlyCost}" step="0.01" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <a th:href="@{/services}" class="btn btn-secondary">Отмена</a>
+    </form>
+</body>
+</html>

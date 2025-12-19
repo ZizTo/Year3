@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{app.title}">Система управления абонентами</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-group { margin: 15px 0; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; box-sizing: border-box; }
+        .btn { padding: 10px 20px; margin: 10px 5px 10px 0; border: none; border-radius: 5px; cursor: pointer; }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .lang-switcher { margin-bottom: 20px; padding: 10px; background: #f0f0f0; border-radius: 5px; }
+        .lang-switcher a { margin-right: 10px; padding: 5px 10px; text-decoration: none; color: #007bff; }
+    </style>
+</head>
+<body>
+    <!-- Переключатель языков -->
+    <div class="lang-switcher">
+        <strong>Язык:</strong>
+        <a th:href="@{/subscribers/new(lang='ru')}">🇷🇺 Русский</a>
+        <a th:href="@{/subscribers/new(lang='en')}">🇬🇧 English</a>
+        <a th:href="@{/subscribers/new(lang='de')}">🇩🇪 Deutsch</a>
+    </div>
+
+    <h1 th:if="${subscriber.id != null and subscriber.id != 0}">Редактирование абонента</h1>
+    <h1 th:if="${subscriber.id == null or subscriber.id == 0}">Добавить абонента</h1>
+    
+    <form th:action="@{/subscribers}" th:object="${subscriber}" method="POST">
+        <input type="hidden" th:field="*{id}" th:if="*{id}">
+        
+        <div class="form-group">
+            <label>ФИО:</label>
+            <input type="text" th:field="*{fullName}" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Телефон:</label>
+            <input type="text" th:field="*{phoneNumber}" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Заблокирован:</label>
+            <select th:field="*{blocked}">
+                <option value="false">Нет</option>
+                <option value="true">Да</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <a th:href="@{/subscribers}" class="btn btn-secondary">Отмена</a>
+    </form>
+</body>
+</html>

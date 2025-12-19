@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h2>Registration</h2>
+    <form action="?action=saveUser" method="post">
+        <label>Login:</label>
+        <input type="text" name="login" required/><br/><br/>
+        
+        <label>Password:</label>
+        <input type="password" name="password" required/><br/><br/>
+        
+        <button type="submit">Register</button>
+    </form>
+    <br/>
+    <a href="?action=home">Back to Home</a>
+</body>
+</html>

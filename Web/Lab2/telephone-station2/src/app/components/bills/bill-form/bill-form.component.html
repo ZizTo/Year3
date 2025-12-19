@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>{{ isEdit ? 'Редактирование счета' : 'Добавить счет' }}</h1>
+
+  <form (ngSubmit)="saveBill()" class="form">
+    <div class="form-group">
+      <label>Абонент:</label>
+      <select [(ngModel)]="bill.subscriber" name="subscriber" required class="form-control">
+        <option [value]="null">-- Выберите абонента --</option>
+        <option *ngFor="let sub of subscribers" [value]="sub">
+          {{ sub.fullName }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Сумма (руб):</label>
+      <input 
+        type="number" 
+        [(ngModel)]="bill.amount" 
+        name="amount"
+        step="0.01"
+        required 
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group">
+      <label>Дата выставления:</label>
+      <input 
+        type="date" 
+        [(ngModel)]="bill.issueDate" 
+        name="issueDate"
+        required 
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group">
+      <label>Оплачен:</label>
+      <select [(ngModel)]="bill.paid" name="paid" class="form-control">
+        <option [value]="false">Нет</option>
+        <option [value]="true">Да</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">Сохранить</button>
+      <button type="button" (click)="cancel()" class="btn btn-secondary">Отмена</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="app-container">
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a routerLink="/subscribers" routerLinkActive="active" class="nav-link">
+            Абоненты
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/services" routerLinkActive="active" class="nav-link">
+            Услуги
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/bills" routerLinkActive="active" class="nav-link">
+            Счета
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

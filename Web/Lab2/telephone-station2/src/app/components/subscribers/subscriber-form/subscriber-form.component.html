@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>{{ isEdit ? 'Редактирование абонента' : 'Добавить абонента' }}</h1>
+
+  <form (ngSubmit)="saveSubscriber()" class="form">
+    <div class="form-group">
+      <label>ФИО:</label>
+      <input 
+        type="text" 
+        [(ngModel)]="subscriber.fullName" 
+        name="fullName"
+        required 
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group">
+      <label>Телефон:</label>
+      <input 
+        type="text" 
+        [(ngModel)]="subscriber.phoneNumber" 
+        name="phoneNumber"
+        required 
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group">
+      <label>Заблокирован:</label>
+      <select [(ngModel)]="subscriber.blocked" name="blocked" class="form-control">
+        <option [value]="false">Нет</option>
+        <option [value]="true">Да</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">Сохранить</button>
+      <button type="button" (click)="cancel()" class="btn btn-secondary">Отмена</button>
+    </div>
+  </form>
+</div>

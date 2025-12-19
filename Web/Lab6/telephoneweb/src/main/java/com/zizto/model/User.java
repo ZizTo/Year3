@@ -3,7 +3,7 @@ package com.zizto.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "AppUsers") // Имя таблицы (Users часто зарезервировано в SQL)
+@Table(name = "AppUsers")
 public class User {
 
     @Id
@@ -14,7 +14,7 @@ public class User {
     private String login;
 
     @Column(nullable = false)
-    private String password; // В реальном проекте здесь должен быть хэш, но для лабы храним текст
+    private String password;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -28,7 +28,6 @@ public class User {
         this.role = role;
     }
 
-    // Геттеры и сеттеры
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 

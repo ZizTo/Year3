@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Список абонентов</h1>
+
+  <div class="actions">
+    <button (click)="router.navigate(['/subscribers/new'])" class="btn btn-primary">
+      + Добавить абонента
+    </button>
+  </div>
+
+  <div *ngIf="loading" class="loading">Загрузка...</div>
+
+  <table *ngIf="!loading && subscribers.length > 0" class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>ФИО</th>
+        <th>Телефон</th>
+        <th>Статус</th>
+        <th>Действия</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let subscriber of subscribers">
+        <td>{{ subscriber.id }}</td>
+        <td>{{ subscriber.fullName }}</td>
+        <td>{{ subscriber.phoneNumber }}</td>
+        <td>
+          <span *ngIf="subscriber.blocked" class="badge badge-danger">Заблокирован</span>
+          <span *ngIf="!subscriber.blocked" class="badge badge-success">Активен</span>
+        </td>
+        <td>
+          <button (click)="editSubscriber(subscriber.id)" class="btn btn-sm btn-warning">Редактировать</button>
+          <button (click)="deleteSubscriber(subscriber.id)" class="btn btn-sm btn-danger">Удалить</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!loading && subscribers.length === 0" class="text-muted">Нет абонентов</p>
+</div>

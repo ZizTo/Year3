@@ -1,0 +1,17 @@
+<p>service-list works!</p>
+
+<h3>Список услуг</h3>
+<a routerLink="new" class="btn btn-success">Добавить услугу</a>
+<!--<ul class="list-group">-->
+  <div *ngFor="let service of services$ | async">
+  <a 
+     [routerLink]="[service.id]"
+     class="list-group-item list-group-item-action">
+    <span class="badge bg-primary">{{ service.id }}</span>
+    {{ service.description }}
+  </a>
+  <a [routerLink]="[service.id, 'edit']" class="btn btn-outline-primary btn-sm">Редактировать</a>
+  </div>
+<!--</ul>-->
+
+<!--<router-outlet></router-outlet>-->

@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>{{ isEdit ? 'Редактирование услуги' : 'Добавить услугу' }}</h1>
+
+  <form (ngSubmit)="saveService()" class="form">
+    <div class="form-group">
+      <label>Название услуги:</label>
+      <input 
+        type="text" 
+        [(ngModel)]="service.name" 
+        name="name"
+        required 
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group">
+      <label>Ежемесячная стоимость (руб):</label>
+      <input 
+        type="number" 
+        [(ngModel)]="service.monthlyCost" 
+        name="monthlyCost"
+        step="0.01"
+        required 
+        class="form-control"
+      >
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">Сохранить</button>
+      <button type="button" (click)="cancel()" class="btn btn-secondary">Отмена</button>
+    </div>
+  </form>
+</div>

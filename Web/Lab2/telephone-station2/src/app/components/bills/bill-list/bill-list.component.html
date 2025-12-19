@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Список счетов</h1>
+
+  <div class="actions">
+    <button (click)="router.navigate(['/bills/new'])" class="btn btn-primary">
+      + Добавить счет
+    </button>
+  </div>
+
+  <div *ngIf="loading" class="loading">Загрузка...</div>
+
+  <table *ngIf="!loading && bills.length > 0" class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Абонент</th>
+        <th>Сумма (руб)</th>
+        <th>Дата выставления</th>
+        <th>Статус</th>
+        <th>Действия</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bill of bills" [ngClass]="{'paid-row': bill.paid}">
+        <td>{{ bill.id }}</td>
+        <td>{{ bill.subscriber?.fullName }}</td>
+        <td>{{ bill.amount | currency }}</td>
+        <td>{{ bill.issueDate | date: 'dd.MM.yyyy' }}</td>
+        <td>
+          <span *ngIf="bill.paid" class="badge badge-success">✓ Оплачен</span>
+          <span *ngIf="!bill.paid" class="badge badge-danger">✗ Не оплачен</span>
+        </td>
+        <td>
+          <button 
+            *ngIf="!bill.paid"
+            (click)="payBill(bill.id)" 
+            class="btn btn-sm btn-success"
+          >
+            Оплатить
+          </button>
+          <button (click)="editBill(bill.id)" class="btn btn-sm btn-warning">Редактировать</button>
+          <button (click)="deleteBill(bill.id)" class="btn btn-sm btn-danger">Удалить</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!loading && bills.length === 0" class="text-muted">Нет счетов</p>
+</div>
+
+<style>
+  .paid-row {
+    background-color: #d4edda;
+  }
+</style>

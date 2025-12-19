@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Список услуг</h1>
+
+  <div class="actions">
+    <button (click)="router.navigate(['/services/new'])" class="btn btn-primary">
+      + Добавить услугу
+    </button>
+  </div>
+
+  <div *ngIf="loading" class="loading">Загрузка...</div>
+
+  <table *ngIf="!loading && services.length > 0" class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Цена (руб/мес)</th>
+        <th>Действия</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let service of services">
+        <td>{{ service.id }}</td>
+        <td>{{ service.name }}</td>
+        <td>{{ service.monthlyCost | currency }}</td>
+        <td>
+          <button (click)="editService(service.id)" class="btn btn-sm btn-warning">Редактировать</button>
+          <button (click)="deleteService(service.id)" class="btn btn-sm btn-danger">Удалить</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!loading && services.length === 0" class="text-muted">Нет услуг</p>
+</div>

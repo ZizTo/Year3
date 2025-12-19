@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="#{app.title}">Система управления абонентами</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { color: #333; }
+        .menu { list-style: none; padding: 0; }
+        .menu li { margin: 10px 0; }
+        .menu a { text-decoration: none; padding: 10px 20px; background: #007bff; color: white; border-radius: 5px; display: inline-block; }
+        .menu a:hover { background: #0056b3; }
+        .lang-switcher { margin-bottom: 30px; padding: 10px; background: #f0f0f0; border-radius: 5px; }
+        .lang-switcher a { margin-right: 15px; padding: 5px 10px; text-decoration: none; color: #007bff; }
+        .lang-switcher a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Переключатель языков -->
+        <div class="lang-switcher">
+            <strong>Язык:</strong>
+            <a th:href="@{/(lang='ru')}">🇷🇺 Русский</a>
+            <a th:href="@{/(lang='en')}">🇬🇧 English</a>
+            <a th:href="@{/(lang='de')}">🇩🇪 Deutsch</a>
+        </div>
+
+        <h1 th:text="#{app.title}">Система управления абонентами</h1>
+        <ul class="menu">
+            <li><a th:href="@{/subscribers}" th:text="#{app.subscribers}">Абоненты</a></li>
+            <li><a th:href="@{/services}" th:text="#{app.services}">Услуги</a></li>
+            <li><a th:href="@{/bills}" th:text="#{app.bills}">Счета</a></li>
+        </ul>
+    </div>
+</body>
+</html>

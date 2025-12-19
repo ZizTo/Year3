@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{app.bills}">Счета</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #ff9800; color: white; }
+        .btn { padding: 5px 10px; margin: 5px; text-decoration: none; border-radius: 3px; display: inline-block; }
+        .btn-primary { background: #ff9800; color: white; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-danger { background: #dc3545; color: white; }
+        .btn-primary:hover { background: #e68900; }
+        .btn-success:hover { background: #1e7e34; }
+        .btn-danger:hover { background: #c82333; }
+        .paid { background-color: #d4edda; }
+        .pagination { margin-top: 20px; }
+        .pagination a, .pagination span { padding: 8px 12px; margin: 5px; text-decoration: none; background: #f0f0f0; border-radius: 3px; display: inline-block; }
+        .pagination a:hover { background: #ff9800; color: white; }
+        .pagination .active { background: #ff9800; color: white; }
+        .lang-switcher { margin-bottom: 20px; padding: 10px; background: #f0f0f0; border-radius: 5px; }
+        .lang-switcher a { margin-right: 10px; padding: 5px 10px; text-decoration: none; color: #ff9800; }
+        .actions { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <!-- Переключатель языков -->
+    <div class="lang-switcher">
+        <strong>Язык:</strong>
+        <a th:href="@{/bills(lang='ru')}">🇷🇺 Русский</a>
+        <a th:href="@{/bills(lang='en')}">🇬🇧 English</a>
+        <a th:href="@{/bills(lang='de')}">🇩🇪 Deutsch</a>
+    </div>
+
+    <h1 th:text="#{app.bills}">Список счетов</h1>
+    
+    <div class="actions">
+        <a th:href="@{/bills/new}" class="btn btn-primary" th:text="'+ ' + #{app.add}">+ Добавить счет</a>
+        <a th:href="@{/}" class="btn btn-primary" th:text="'← ' + #{app.home}">← На главную</a>
+    </div>
+    
+    <table th:if="${!bills.isEmpty()}">
+        <tr>
+            <th th:text="#{app.id}">ID</th>
+            <th>Абонент</th>
+            <th th:text="#{app.amount}">Сумма (руб)</th>
+            <th th:text="#{app.date}">Дата выставления</th>
+            <th th:text="#{app.status}">Статус</th>
+            <th th:text="#{app.actions}">Действия</th>
+        </tr>
+        <tr th:each="bill : ${bills}" th:class="${bill.paid ? 'paid' : ''}">
+            <td th:text="${bill.id}"></td>
+            <td th:text="${bill.subscriber?.fullName}"></td>
+            <td th:text="${#numbers.formatDecimal(bill.amount, 1, 2)}"></td>
+            <td th:text="${bill.issueDate}"></td>
+            <td>
+                <span th:if="${bill.paid}" style="color: green; font-weight: bold;">✓ <span th:text="#{app.paid}">Оплачен</span></span>
+                <span th:unless="${bill.paid}" style="color: red; font-weight: bold;">✗ <span th:text="#{app.not_paid}">Не оплачен</span></span>
+            </td>
+            <td>
+                <a th:if="${!bill.paid}" th:href="@{/bills/pay/{id}(id=${bill.id})}" class="btn btn-success" th:text="#{app.pay}" onclick="return confirm('Отметить как оплачено?')">Оплатить</a>
+                <a th:href="@{/bills/delete/{id}(id=${bill.id})}" class="btn btn-danger" th:text="#{app.delete}" onclick="return confirm('Удалить?')">Удалить</a>
+            </td>
+        </tr>
+    </table>
+    <p th:if="${bills.isEmpty()}">Нет счетов в системе</p>
+
+    <!-- Пагинация -->
+    <div class="pagination" th:if="${totalPages > 1}">
+        <span th:text="#{pagination.page} + ' ' + ${currentPage + 1} + ' ' + #{pagination.of} + ' ' + ${totalPages}">Страница 1 из 5</span>
+        <br/><br/>
+        
+        <a th:if="${currentPage > 0}" th:href="@{/bills(page=0)}">« Первая</a>
+        <a th:if="${currentPage > 0}" th:href="@{/bills(page=${currentPage - 1})}">← Предыдущая</a>
+        
+        <a th:each="i : ${#numbers.sequence(0, totalPages - 1)}" 
+           th:href="@{/bills(page=${i})}"
+           th:class="${i == currentPage ? 'active' : ''}"
+           th:text="${i + 1}">1</a>
+        
+        <a th:if="${currentPage < totalPages - 1}" th:href="@{/bills(page=${currentPage + 1})}">Следующая →</a>
+        <a th:if="${currentPage < totalPages - 1}" th:href="@{/bills(page=${totalPages - 1})}">Последняя »</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\Hostx64\x64>"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
+**********************************************************************
+** Visual Studio 2022 Developer Command Prompt v17.14.19
+** Copyright (c) 2025 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\Hostx64\x64>
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\Hostx64\x64>
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\Hostx64\x64>cd C:\Users\ZizTo\Documents\GitHub\Year3\TranslationsMethods\МТ2026\slnTwoModules\TwoModules\
+
+C:\Users\ZizTo\Documents\GitHub\Year3\TranslationsMethods\МТ2026\slnTwoModules\TwoModules>
+C:\Users\ZizTo\Documents\GitHub\Year3\TranslationsMethods\МТ2026\slnTwoModules\TwoModules>cl /D "NDEBUG" /MD /EHsc /FAcs TwoModules.cpp Mod2.cpp pch.cpp
+Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.44.35219 для x64
+(C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+
+TwoModules.cpp
+Mod2.cpp
+pch.cpp
+Создание кода...
+Microsoft (R) Incremental Linker Version 14.44.35219.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:TwoModules.exe
+TwoModules.obj
+Mod2.obj
+pch.obj
+
+C:\Users\ZizTo\Documents\GitHub\Year3\TranslationsMethods\МТ2026\slnTwoModules\TwoModules>./TwoModules.exe
+"." не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+
+C:\Users\ZizTo\Documents\GitHub\Year3\TranslationsMethods\МТ2026\slnTwoModules\TwoModules>"./TwoModules.exe"
+Hello World!
+
+v-vector
+1;2;3;
+
+w-vector
+3;2;1;
+
+scalar product (v,w)
+10
+
+Press the Key Enter to Exit:
+
+
+C:\Users\ZizTo\Documents\GitHub\Year3\TranslationsMethods\МТ2026\slnTwoModules\TwoModules>

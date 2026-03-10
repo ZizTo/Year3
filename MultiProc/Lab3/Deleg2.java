@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -54,9 +52,10 @@ public class Deleg2 {
                 return;
             }
             for (int i = 2; i < n; i++) {
-                if (n % i == 0)
+                if (n % i == 0) {
                     count -= 1;
-                break;
+                    break;
+                }
             }
             count += 1;
         }

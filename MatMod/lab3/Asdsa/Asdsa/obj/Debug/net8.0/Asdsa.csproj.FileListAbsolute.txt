@@ -1,0 +1,15 @@
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\bin\Debug\net8.0\Asdsa.exe
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\bin\Debug\net8.0\Asdsa.deps.json
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\bin\Debug\net8.0\Asdsa.runtimeconfig.json
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\bin\Debug\net8.0\Asdsa.dll
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\bin\Debug\net8.0\Asdsa.pdb
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\obj\Debug\net8.0\Asdsa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\obj\Debug\net8.0\Asdsa.AssemblyInfoInputs.cache
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\obj\Debug\net8.0\Asdsa.AssemblyInfo.cs
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\obj\Debug\net8.0\Asdsa.csproj.CoreCompileInputs.cache
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\obj\Debug\net8.0\Asdsa.sourcelink.json
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\obj\Debug\net8.0\Asdsa.dll
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\obj\Debug\net8.0\refint\Asdsa.dll
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\obj\Debug\net8.0\Asdsa.pdb
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\obj\Debug\net8.0\Asdsa.genruntimeconfig.cache
+C:\Users\ZizTo\Documents\GitHub\Year3\MatMod\lab3\Asdsa\Asdsa\obj\Debug\net8.0\ref\Asdsa.dll

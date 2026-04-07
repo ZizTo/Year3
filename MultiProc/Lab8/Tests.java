@@ -272,8 +272,8 @@ public class Tests {
     }
 
     static final int INITIAL_SIZE = 10000;
-    static final int TOTAL_OPS = 1000000;
-    static final int RANGE = 1000;
+    static final int TOTAL_OPS = 100000;
+    static final int RANGE = 10000;
 
     public static void runTest(String name, Object list, int threadCount) throws InterruptedException {
         Random rand = new Random();

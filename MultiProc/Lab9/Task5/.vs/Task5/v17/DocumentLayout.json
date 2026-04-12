@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MultiProc\\Lab9\\Task5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E068FEAE-996F-49FD-917C-7EC0757518C6}|Task5\\Task5.vcxproj|C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MultiProc\\Lab9\\Task5\\Task5\\Task5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E068FEAE-996F-49FD-917C-7EC0757518C6}|Task5\\Task5.vcxproj|solutionrelative:Task5\\Task5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Task5.cpp",
+              "DocumentMoniker": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MultiProc\\Lab9\\Task5\\Task5\\Task5.cpp",
+              "RelativeDocumentMoniker": "Task5\\Task5.cpp",
+              "ToolTip": "C:\\Users\\ZizTo\\Documents\\GitHub\\Year3\\MultiProc\\Lab9\\Task5\\Task5\\Task5.cpp",
+              "RelativeToolTip": "Task5\\Task5.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-12T15:43:22.148Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

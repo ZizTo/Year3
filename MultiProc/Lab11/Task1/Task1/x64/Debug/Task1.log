@@ -1,0 +1,15 @@
+﻿  Task1.cpp
+C:\Users\ZizTo\Documents\GitHub\Year3\MultiProc\Lab11\Task1\Task1\Task1.cpp(21,47): warning C4244: инициализация: преобразование "__int64" в "unsigned long", возможна потеря данных
+      C:\Users\ZizTo\Documents\GitHub\Year3\MultiProc\Lab11\Task1\Task1\Task1.cpp(21,47):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\Users\ZizTo\Documents\GitHub\Year3\MultiProc\Lab11\Task1\Task1\Task1.cpp(94,29):
+          выполняется компиляция ссылки на экземпляр шаблон функции "T parallel_accumulate<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,__int64>(Iterator,Iterator,T)"
+          with
+          [
+              T=__int64,
+              _Ty=__int64,
+              Iterator=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<__int64>>>
+          ]
+  
+C:\Users\ZizTo\Documents\GitHub\Year3\MultiProc\Lab11\Task1\Task1\Task1.cpp(21,32): warning C4244: инициализация: преобразование "__int64" в "const unsigned long", возможна потеря данных
+  Task1.vcxproj -> C:\Users\ZizTo\Documents\GitHub\Year3\MultiProc\Lab11\Task1\x64\Debug\Task1.exe
